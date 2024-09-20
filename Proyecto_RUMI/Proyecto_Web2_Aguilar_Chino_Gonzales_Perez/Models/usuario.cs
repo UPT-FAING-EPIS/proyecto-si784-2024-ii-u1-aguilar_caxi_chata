@@ -31,13 +31,14 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
 
         [StringLength(9)]
         public string celular { get; set; }
-       
+        [StringLength(1)]
+        public string estado { get; set; }
 
         public int? tipo_usuario { get; set; }
 
-
         public decimal? saldo { get; set; }
-        [Column(TypeName = "decimal(18, 2)")]
+
+        public int? limite_transferencias { get; set; }
 
         public virtual tipo_usuario tipo_usuario1 { get; set; }
 
@@ -48,25 +49,26 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
         public virtual ICollection<transferencia> transferencias1 { get; set; }
 
 
+        public List<usuario> Listar()
+        {
+            var query = new List<usuario>();
+            try
+            {
+                using (var db = new ModeloSistema())
+                {
+                    query = db.usuarios.Include("tipo_usuario1")
+                        .Where(x => x.estado == "A")
+                        .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return query;
+        }
 
-		public List<usuario> Listar()
-		{
-			var query = new List<usuario>();
-			try
-			{
-				using (var db = new ModeloSistema())
-				{
-					query = db.usuarios.Include("tipo_usuario1").ToList();
-				}
-			}
-			catch (Exception)
-			{
-				throw;
-			}
-			return query;
-		}
-
-		public usuario Obtener(int id)
+        public usuario Obtener(int id)
 		{
 			var query = new usuario();
 
@@ -143,10 +145,44 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
 				throw;
 			}
 		}
+		
+        //--------------------------------------------------------------------------------------
+        public decimal TotalSaldo()
+        {
+            decimal total = 0;
+            try
+            {
+                using (var db = new ModeloSistema())
+                {
+                    total = db.usuarios.Sum(u => u.saldo ?? 0);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return total;
+        }
 
-
-
-
-
-	}
+        public decimal ObtenerSaldoUsuario(int userId)
+        {
+            decimal saldo = 0;
+            try
+            {
+                using (var db = new ModeloSistema())
+                {
+                    var usuario = db.usuarios.FirstOrDefault(x => x.id_usuario == userId);
+                    if (usuario != null)
+                    {
+                        saldo = usuario.saldo.Value;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return saldo;
+        }
+    }
 }

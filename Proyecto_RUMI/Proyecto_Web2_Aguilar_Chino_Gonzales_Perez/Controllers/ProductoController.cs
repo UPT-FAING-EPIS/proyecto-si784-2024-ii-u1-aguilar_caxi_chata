@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -10,96 +11,122 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers
 {
 	public class ProductoController : Controller
 	{
-		// GET: Producto
-		private ModeloSistema db = new ModeloSistema();
+        private ModeloSistema db = new ModeloSistema();
+        private producto objProducto = new producto();
+        private imagen_producto objImagenProducto = new imagen_producto();
 
-		// GET: Productos
-		public ActionResult Index()
+        public ActionResult Index()
 		{
-			int userID = Convert.ToInt32(Session["UserID"]);
-			string username = Session["Username"] as string;
-			string usertype = Session["Usertype"] as string;
-			return View(db.producto.ToList());
-		}
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            var productos = objProducto.ListarTodos();
+            return View(productos);
+        }
 
-		// GET: Producto/Details/5
-		public ActionResult Details(int id)
-		{
-			var producto = db.producto.Include("imagen_producto").FirstOrDefault(p => p.id_producto == id);
-			if (producto == null)
-			{
-				return HttpNotFound();
-			}
-			return View(producto);
-		}
+        public ActionResult Details(int id)
+        {
+            var imagenes = objImagenProducto.Listar(id);
+            return View(imagenes);
+        }
 
-		// GET: Producto/Create
-		public ActionResult Create()
-		{
-			var nuevoProducto = new producto();
-			return View(nuevoProducto);
-		}
+        public ActionResult Create()
+        {
+            var nuevoProducto = new producto();
+            return View(nuevoProducto);
+        }
 
-		// POST: Producto/Create
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Create(producto producto)
-		{
-			if (ModelState.IsValid)
-			{
-				db.producto.Add(producto);
-				db.SaveChanges();
-				return RedirectToAction("Index");
-			}
+        [HttpPost]
+        public ActionResult Create(producto producto)
+        {
+            try
+            {
+                string accion = "Index";
+                if (ModelState.IsValid)
+                {
+                    if (producto.precio > 0 && producto.stock > 0)
+                    {
+                        producto.estado = "A";
+                        producto.fecha_creacion = DateTime.Now;
+                        db.producto.Add(producto);
+                        db.SaveChanges();
+                        TempData["Message"] = "La información fue guardada correctamente.";
+                    }
+                    else
+                    {
+                        TempData["ErrorMessage"] = "Revise si la información es correcta.";
+                        accion = "Create";
+                    }
+                }
+                return RedirectToAction(accion);
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Revise si la información es correcta.";
+                return RedirectToAction("Create");
+            }
+        }
 
-			return View(producto);
-		}
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var producto = db.producto.Find(id);
+            if (producto == null)
+            {
+                return HttpNotFound();
+            }
+            return View(producto);
+        }
 
-		// GET: Producto/Edit/5
-		public ActionResult Edit(int id)
-		{
-			var producto = db.producto.Find(id);
-			if (producto == null)
-			{
-				return HttpNotFound();
-			}
-			return View(producto);
-		}
+        [HttpPost]
+        public ActionResult Edit(producto producto)
+        {
+            try
+            {
+                string accion = "Index";
+                if (ModelState.IsValid)
+                {
+                    if (producto.precio > 0 && producto.stock > 0)
+                    {
+                        db.Entry(producto).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
+                        TempData["Message"] = "La información fue guardada correctamente.";
+                    }
+                    else
+                    {
+                        TempData["ErrorMessage"] = "Revise si la información es correcta.";
+                        accion = "Edit/" + producto.id_producto;
+                    }
+                }
+                return RedirectToAction(accion);
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Revise si la información es correcta.";
+                return RedirectToAction("Edit/" + producto.id_producto);
+            }
+        }
 
-		// POST: Producto/Edit/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Edit(producto producto)
-		{
-			if (ModelState.IsValid)
-			{
-				db.Entry(producto).State = System.Data.Entity.EntityState.Modified;
-				db.SaveChanges();
-				return RedirectToAction("Index");
-			}
-			return View(producto);
-		}
+        public ActionResult Delete(int? id)
+        {
+            try
+            {
+                producto producto = db.producto.Find(id);
+                producto.estado = "I";
+                db.Entry(producto).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                TempData["Message"] = "La información fue guardada correctamente.";
+                return RedirectToAction("Index");
 
-		// GET: Producto/Delete/5
-		public ActionResult Delete(int id)
-		{
-			var producto = db.producto.Find(id);
-			if (producto == null)
-			{
-				return HttpNotFound();
-			}
-			return View(producto);
-		}
-
-		// POST: Producto/Delete/5
-		[HttpPost, ActionName("Delete")]
-		[ValidateAntiForgeryToken]
-		public ActionResult DeleteConfirmed(int id)
-		{
-			var producto = db.producto.Find(id);
-			db.producto.Remove(producto);
-			db.SaveChanges();
-			return RedirectToAction("Index");
-		}
+            }
+            catch (Exception ex)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+        }
 	}
 }

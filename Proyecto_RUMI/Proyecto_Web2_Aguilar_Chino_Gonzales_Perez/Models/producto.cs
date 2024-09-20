@@ -20,6 +20,11 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
             favoritos = new HashSet<favoritos>();
             imagen_producto = new HashSet<imagen_producto>();
         }
+        public class ProductoMasVendido
+        {
+            public string Nombre { get; set; }
+            public int TotalQuantity { get; set; }
+        }
 
         [Key]
         public int id_producto { get; set; }
@@ -37,6 +42,7 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
 
         [StringLength(50)]
         public string categoria { get; set; }
+        public string estado { get; set; }
 
         public DateTime? fecha_creacion { get; set; }
 
@@ -63,8 +69,10 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
 			{
 				using (var db = new ModeloSistema())// cambiar
 				{
-					query = db.producto.Include("imagen_producto").ToList();
-				}
+                    query = db.producto.Include("imagen_producto")
+                        .Where(x => x.estado == "A" && x.stock > 0)
+                        .ToList();
+                }
 			}
 			catch (Exception)
 			{
@@ -72,8 +80,26 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
 			}
 			return query;
 		}
+        public List<producto> ListarTodos()
+        {
+            var query = new List<producto>();
+            try
+            {
+                using (var db = new ModeloSistema())// cambiar
+                {
+                    query = db.producto.Include("imagen_producto")
+                        .Where(x => x.estado == "A")
+                        .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return query;
+        }
 
-		public producto Obtener(int id)
+        public producto Obtener(int id)
 		{
 			var query = new producto();
 
@@ -84,6 +110,7 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
 					query = db.producto.Include("imagen_producto")
 						.Where(x => x.id_producto == id)
 						.SingleOrDefault();
+					
 				}
 			}
 			catch (Exception)
@@ -151,6 +178,31 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
 			}
 		}
 
+        public List<ProductoMasVendido> ListarProductosMasVendidos()
+        {
+            var query = new List<ProductoMasVendido>();
+            try
+            {
+                using (var db = new ModeloSistema())
+                {
+                    query = db.DetalleCompra
+                              .GroupBy(d => d.id_producto)
+                              .Select(g => new ProductoMasVendido
+                              {
+                                  Nombre = g.FirstOrDefault().producto.nombre,
+                                  TotalQuantity = g.Sum(d => d.cantidad ?? 0)
+                              })
+                              .OrderByDescending(p => p.TotalQuantity)
+                              .Take(5)
+                              .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return query;
+        }
 
-	}
+    }
 }

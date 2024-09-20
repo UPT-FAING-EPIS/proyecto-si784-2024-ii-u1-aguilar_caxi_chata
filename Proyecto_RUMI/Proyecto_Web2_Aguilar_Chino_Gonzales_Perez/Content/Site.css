@@ -58,6 +58,57 @@
     *::after {
         box-sizing: border-box;
     }
+/*Animaciones rotación*/
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.img-rotar {
+    animation: girar 5s linear infinite;
+}
+
+
+.globo {
+    position: relative;
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: 100px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation: girar 10s linear infinite;
+}
+
+    .globo img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .globo .front {
+        transform: rotateY(0deg);
+    }
+
+    .globo .back {
+        transform: rotateY(180deg);
+    }
+
+@keyframes girar {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
 /* (1) - Wrapper */
 .wrapper {
     width: 1152px;
@@ -259,21 +310,36 @@
 
 /* (5) - Activities Form*/
 .activitiesForm {
+    max-height: 700px;
+    max-width: 500px;
     grid-area: 1 / 2 / span 15 / span 20;
     background: linear-gradient(180deg, var(--negative), var(--lightGradient));
     border-radius: var(--roundLG);
     box-shadow: var(--shadow);
 }
 
+    .activitiesForm header {
+        /* display: flex;
+        margin-bottom: var(--spaceLG);*/
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+    }
+
     .activitiesForm h1 {
         color: var(--text);
         font-weight: var(--light);
         font-size: var(--lg);
-        padding: var(--spaceXL) var(--spaceXL) var(--spaceSM) var(--spaceXL);
+/*        padding: var(--xl) var(--xl) var(--lg) var(--lg);
+*/        padding: 20px 50px 20px 100px;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
     }
 
     .activitiesForm main {
-        max-height: 600px;
+/*        max-height: 300px;
+*/        align-items: center;
         overflow-y: auto;
     }
 

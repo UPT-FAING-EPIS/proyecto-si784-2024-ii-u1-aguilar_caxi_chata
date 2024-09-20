@@ -37,10 +37,13 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
 
         public class TransferenciaResult
         {
+            public int? IdEmisor { get; set; }
             public string NombreEmisor { get; set; }
             public string NombreReceptor { get; set; }
             public decimal? Cantidad { get; set; }
+            public string CantidadFormateada { get; set; }
             public DateTime? Fecha { get; set; }
+            public string FechaFormateada => Fecha.HasValue ? Fecha.Value.ToString("dd MMM yyyy, hh:mm tt") : string.Empty;
         }
 
         public List<TransferenciaResult> Lista6Transferencia(int userId)
@@ -64,12 +67,14 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
                             EmisorNombre = db.usuarios.Where(u => u.id_usuario == t.id_emisor).Select(u => u.usuario1).FirstOrDefault(),
                             ReceptorNombre = db.usuarios.Where(u => u.id_usuario == t.id_receptor).Select(u => u.usuario1).FirstOrDefault()
                         })
-                        .OrderByDescending(t => t.fecha)
+                        .ToList()
                         .Select(t => new TransferenciaResult
                         {
+                            IdEmisor = t.id_emisor,
                             NombreEmisor = t.EmisorNombre,
                             NombreReceptor = t.ReceptorNombre,
                             Cantidad = t.cantidad,
+                            CantidadFormateada = t.id_emisor == userId ? "-" + t.cantidad : "+" + t.cantidad,
                             Fecha = t.fecha
                         })
                         .ToList();
@@ -106,9 +111,11 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models
                         .ToList()
                         .Select(t => new TransferenciaResult
                         {
+                            IdEmisor = t.id_emisor,
                             NombreEmisor = t.EmisorNombre,
                             NombreReceptor = t.ReceptorNombre,
                             Cantidad = t.cantidad,
+                            CantidadFormateada = t.id_emisor == userId ? "-" + t.cantidad : "+" + t.cantidad,
                             Fecha = t.fecha
                         })
                         .ToList();
