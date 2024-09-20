@@ -1,6 +1,0 @@
-projectKey=CalidadRumi
-serverUrl=http://localhost:9000
-serverVersion=10.6.0.92116
-dashboardUrl=http://localhost:9000/dashboard?id=CalidadRumi
-ceTaskId=c545009f-e151-4e8a-8e0a-bb6a827c3733
-ceTaskUrl=http://localhost:9000/api/ce/task?id=c545009f-e151-4e8a-8e0a-bb6a827c3733

@@ -1,38 +1,41 @@
 ﻿@model Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models.imagen_producto
 @{
-    ViewBag.Title = Model != null && Model.id_imagen == 0 ? "Añadir Nueva Imagen" : "Editar Imagen";
+	ViewBag.Title = "Editar imagen";
+	var idProducto = Model.id_producto;
 }
 
-<h2>@ViewBag.Title</h2>
-
-@using (Html.BeginForm("Create", "ImagenProducto", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
-
-    @Html.HiddenFor(model => model.id_producto)
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.url_imagen)
-        @Html.TextBoxFor(model => model.url_imagen, new { type = "file" })
-        @Html.ValidationMessageFor(model => model.url_imagen)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.descripcion)
-        @Html.EditorFor(model => model.descripcion)
-        @Html.ValidationMessageFor(model => model.descripcion)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.es_principal)
-        @Html.CheckBoxFor(model => model.es_principal)
-    </div>
-
-    <div class="form-group">
-        <button type="submit" class="btn btn-success">@ViewBag.Title</button>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Volver a la lista", "Index", new { idProducto = Model.id_producto })
-</div>
+<main class="formulario">
+	<div class="titulo-seccion">
+		<h1>Agregar imagen</h1>
+	</div>
+	@using (Html.BeginForm("Edit", "ImagenProducto", FormMethod.Post, new { @class = "mb-3" }))
+	{
+		@Html.HiddenFor(model => model.id_imagen)
+		@Html.HiddenFor(model => model.id_producto)
+		@Html.HiddenFor(model => model.fecha_subida)
+		@Html.HiddenFor(model => model.estado)
+		<div class="row">
+			<div class="col-md mt-4">
+				@Html.LabelFor(model => model.url_imagen, "Url", new { @class = "form-label" })
+				@Html.TextBoxFor(model => model.url_imagen, new { @class = "styled-input", required = "required" })
+				<div class="form-text">Ingrese la Url.</div>
+			</div>
+			<div class="col-md mt-4">
+				@Html.LabelFor(model => model.descripcion, "Descripcion", new { @class = "form-label" })
+				@Html.TextBoxFor(model => model.descripcion, new { @class = "form-control", required = "required" })
+				<div class="form-text">Ingrese la descripcion.</div>
+			</div>
+			<div class="col-md mt-4">
+				@Html.LabelFor(model => model.es_principal, "Tipo de usuario", new { @class = "form-label" })
+				@Html.DropDownList("tipo_usuario", (SelectList)ViewBag.Tipo, new { @class = "form-control" })
+				<div class="form-text">Seleccione el tipo.</div>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="d-flex justify-content-center align-items-center gap-4">
+				@Html.ActionLink("Cancelar", "Details", "Producto", new { id = idProducto }, null)
+				<button type="submit" class="btn btn-save"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+			</div>
+		</div>
+	}
+</main>

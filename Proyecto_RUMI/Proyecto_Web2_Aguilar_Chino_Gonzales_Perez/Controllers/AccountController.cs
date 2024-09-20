@@ -36,7 +36,6 @@ namespace Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers
                     Session["UserID"]=user.id_usuario;
                     Session["Username"] = user.usuario1;
                     Session["Usertype"] = user.tipo_usuario;
-                    Session["Saldo"] = user.saldo;
                     return RedirectToAction("Index", "Home");
                 }
                 ModelState.AddModelError("", "Intento de inicio de sesión no válido.");
