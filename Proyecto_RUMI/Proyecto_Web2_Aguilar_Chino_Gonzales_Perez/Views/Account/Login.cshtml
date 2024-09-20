@@ -10,7 +10,9 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" />
+
     @Scripts.Render("~/bundles/modernizr")
     <style>
         body {
@@ -27,7 +29,7 @@
             margin-top: 50px;
             margin-right: 100px;
             margin-left: 100px;
-            padding:50px;
+            padding: 50px;
         }
 
         .login-container {
@@ -63,7 +65,7 @@
                     <div class="form-group2">
                         <div class="globo">
                             <img src="~/Content/Images/Logo/Recurso 1mdpi.png" class="front" alt="Logotipo frontal">
-                            <img src="~/Content/Images/Logo/Recurso 1mdpi - back.png" class="back" alt="Logotipo trasero">
+                            <img src="~/Content/Images/Logo/Recurso 1xhdpi.png" class="back" alt="Logotipo trasero">
                         </div>
                     </div>
                     <h1>RUMI</h1>
