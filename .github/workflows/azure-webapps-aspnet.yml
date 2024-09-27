@@ -22,7 +22,6 @@ name: Build and deploy ASP.NET Framework app to an Azure Web App
 env:
   AZURE_WEBAPP_NAME: CalidadRumi    # Nombre de tu Azure Web App
   AZURE_WEBAPP_PACKAGE_PATH: '.'    # Ruta del proyecto, en este caso, la raíz del repositorio
-  DOTNET_VERSION: '5'               # Version de .NET Core (no lo necesitas para ASP.NET Framework, puedes eliminarlo si no es necesario)
 
 on:
   push:
@@ -34,7 +33,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: windows-latest  # Cambiamos a un entorno Windows necesario para ASP.NET Framework
+    runs-on: windows-latest  # Entorno Windows necesario para ASP.NET Framework
 
     steps:
       - uses: actions/checkout@v4
