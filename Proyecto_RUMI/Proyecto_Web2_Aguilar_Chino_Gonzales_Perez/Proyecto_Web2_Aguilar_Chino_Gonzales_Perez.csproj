@@ -281,7 +281,9 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Properties\PublishProfiles\CalidadRumi - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\CalidadRumi-WebDeploy.pubxml" />
+    <None Include="Properties\PublishProfiles\CalidadRumi-WebDeploy1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
