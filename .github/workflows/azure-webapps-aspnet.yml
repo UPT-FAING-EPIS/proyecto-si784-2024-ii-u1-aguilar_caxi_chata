@@ -26,7 +26,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: windows-2019  # Cambia a windows-2019 para mayor compatibilidad
 
     steps:
     - name: 'Checkout GitHub Action'
@@ -43,10 +43,23 @@ jobs:
       run: |
         choco install visualstudio2019buildtools --include-optional --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Component.VC.14.29.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.Component.MSBuild" -y
 
+    - name: 'Install MSBuild'
+      shell: pwsh
+      run: |
+        choco install msbuild --version=16.8.3 -y  # Instalar una versión específica de MSBuild
+
     - name: 'Setup MSBuild'
-      uses: microsoft/setup-msbuild@v1.0.2  # Configura MSBuild
+      uses: microsoft/setup-msbuild@v1.0.2  # Configura MSBuild con Visual Studio
       with:
         vs-version: 2019  # Utiliza la versión de Visual Studio 2019 compatible con .NET Framework 4.8
+
+    - name: 'Verify MSBuild and VSWhere Availability'
+      run: |
+        where msbuild
+        where vswhere
+
+    - name: 'Check MSBuild Version'
+      run: msbuild -version
 
     - name: 'Build with MSBuild'
       run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
