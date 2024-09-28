@@ -34,13 +34,13 @@ jobs:
       # Paso 1: Checkout del código fuente
       - uses: actions/checkout@master
 
-      # Paso 2: Restaurar paquetes NuGet
+      # Paso 2: Restaurar paquetes NuGet usando el archivo de solución
       - name: Restore NuGet packages
-        run: nuget restore
+        run: nuget restore Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
       # Paso 3: Compilar el proyecto
       - name: Build the solution
-        run: msbuild /t:build /p:Configuration=Release
+        run: msbuild /t:build /p:Configuration=Release Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
       # Paso 4: Ejecutar Snyk para verificar vulnerabilidades
       - name: Run Snyk to check for vulnerabilities
@@ -49,7 +49,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --severity-threshold=high --sarif-file-output=snyk.sarif
+          args: --severity-threshold=high --sarif-file-output=snyk.sarif --file=Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
       # Paso 5: Subir los resultados a GitHub Code Scanning
       - name: Upload SARIF result to GitHub Code Scanning
