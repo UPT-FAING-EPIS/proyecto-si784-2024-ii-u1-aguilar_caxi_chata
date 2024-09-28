@@ -49,7 +49,7 @@ jobs:
       - name: Deploy using FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: 'ftps://waws-prod-yt1-059.ftp.azurewebsites.windows.net'
+          server: 'waws-prod-yt1-059.ftp.azurewebsites.windows.net'
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: './Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release/'
