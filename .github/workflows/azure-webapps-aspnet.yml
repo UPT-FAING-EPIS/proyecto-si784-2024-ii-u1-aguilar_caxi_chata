@@ -21,57 +21,30 @@ name: Deploy ASP.NET App to Azure Web App via FTP
 
 on:
   push:
-    branches:
-      - main  # Reemplaza con la rama que deseas utilizar para el despliegue
+    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
-    runs-on: windows-2019  # Cambia a windows-2019 para mayor compatibilidad
+  build:
+    runs-on: windows-latest
 
     steps:
-    - name: 'Checkout GitHub Action'
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1  # Instala NuGet para restaurar paquetes
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v1
 
-    - name: 'Restore NuGet packages'
-      run: nuget restore Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln  # Asegúrate de que esta sea la ruta correcta del archivo .sln
+      - name: Restore NuGet packages
+        run: nuget restore Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-    - name: 'Install .NET Framework Build Tools'
-      shell: pwsh
-      run: |
-        choco install visualstudio2019buildtools --include-optional --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Component.VC.14.29.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.Component.MSBuild" -y
+      - name: Build with MSBuild
+        run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
-    - name: 'Install MSBuild'
-      shell: pwsh
-      run: |
-        choco install msbuild --version=16.8.3 -y  # Instalar una versión específica de MSBuild
-
-    - name: 'Setup MSBuild'
-      uses: microsoft/setup-msbuild@v1.0.2  # Configura MSBuild con Visual Studio
-      with:
-        vs-version: 2019  # Utiliza la versión de Visual Studio 2019 compatible con .NET Framework 4.8
-
-    - name: 'Verify MSBuild and VSWhere Availability'
-      run: |
-        where msbuild
-        where vswhere
-
-    - name: 'Check MSBuild Version'
-      run: msbuild -version
-
-    - name: 'Build with MSBuild'
-      run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
-
-    - name: 'Publish Web App'
-      run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:DeleteExistingFiles=True /p:publishUrl=$(System.DefaultWorkingDirectory)/PublishOutput
-
-    - name: 'Deploy to Azure WebApp via FTP'
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0  # Acción para realizar deploy con FTP
-      with:
-        ftp-server: "ftp://waws-prod-yt1-059.ftp.azurewebsites.windows.net/site/wwwroot"  # Reemplaza con la URL de tu servidor FTPS
-        ftp-username: ${{ secrets.FTP_USERNAME }}  # Nombre de usuario de FTP configurado en GitHub Secrets
-        ftp-password: ${{ secrets.FTP_PASSWORD }}  # Contraseña de FTP configurada en GitHub Secrets
-        local-dir: '$(System.DefaultWorkingDirectory)/PublishOutput'  # Ruta de la carpeta local publicada
-        git-ftp-args: "--insecure"
+      - name: Deploy using FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: 'ftps://waws-prod-yt1-059.ftp.azurewebsites.windows.net'
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: './Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release'
+          server-dir: '/site/wwwroot'
