@@ -40,6 +40,12 @@ jobs:
       - name: Build with MSBuild
         run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
+      - name: Create Release folder if not exist
+        run: mkdir -p Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release
+
+      - name: List files in Release folder
+        run: dir Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release
+
       - name: Deploy using FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
