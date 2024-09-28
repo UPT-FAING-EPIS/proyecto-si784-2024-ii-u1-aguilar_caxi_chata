@@ -47,6 +47,9 @@ jobs:
       - name: Build with MSBuild
         run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
+      - name: Publish using MSBuild
+        run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
@@ -68,11 +71,10 @@ jobs:
         with:
           name: aspnet-app
 
-      - name: Deploy to Azure Web App using FTP
+      - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ${{ github.workspace }}/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release
-          deployment-method: ftp
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
