@@ -1,0 +1,58 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# A sample workflow which sets up Snyk to analyze the full Snyk platform (Snyk Open Source, Snyk Code,
+# Snyk Container and Snyk Infrastructure as Code)
+# The setup installs the Snyk CLI - for more details on the possible commands
+# check https://docs.snyk.io/snyk-cli/cli-reference
+# The results of Snyk Code are then uploaded to GitHub Security Code Scanning
+#
+# In order to use the Snyk Action you will need to have a Snyk API token.
+# More details in https://github.com/snyk/actions#getting-your-snyk-token
+# or you can signup for free at https://snyk.io/login
+#
+# For more examples, including how to limit scans to only high-severity issues
+# and fail PR checks, see https://github.com/snyk/actions/
+
+name: Workflow for dotNET using Snyk
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  security:
+    runs-on: windows-latest  # Utiliza Windows ya que trabajas con .NET Framework
+
+    steps:
+      # Paso 1: Checkout del código fuente
+      - uses: actions/checkout@master
+
+      # Paso 2: Restaurar paquetes NuGet
+      - name: Restore NuGet packages
+        run: nuget restore
+
+      # Paso 3: Compilar el proyecto
+      - name: Build the solution
+        run: msbuild /t:build /p:Configuration=Release
+
+      # Paso 4: Ejecutar Snyk para verificar vulnerabilidades
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/dotnet@master
+        continue-on-error: true  # Para asegurarnos de que se carguen los resultados SARIF aunque haya vulnerabilidades
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --severity-threshold=high --sarif-file-output=snyk.sarif
+
+      # Paso 5: Subir los resultados a GitHub Code Scanning
+      - name: Upload SARIF result to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: snyk.sarif
