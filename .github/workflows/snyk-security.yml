@@ -12,35 +12,33 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      # Paso 1: Habilitar rutas largas en Git
       - name: Enable long paths in Git
         run: git config --system core.longpaths true
 
+      # Paso 2: Checkout del código
       - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          path: './repo'
+        uses: actions/checkout@v4  # Actualizado a v4
 
-      - name: List files in the repository
-        run: ls -R ./repo
-
-      # Paso para instalar MSBuild
+      # Paso 3: Instalar MSBuild
       - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
+        uses: microsoft/setup-msbuild@v2  # Actualizado a v2
 
+      # Paso 4: Restaurar paquetes NuGet
       - name: Restore NuGet packages
-        run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+        run: nuget restore ./Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-      # Instalar la CLI de Snyk
+      # Paso 5: Instalar la CLI de Snyk
       - name: Install Snyk CLI
         run: npm install -g snyk
 
-      # Ejecutar escaneo de Snyk para verificar vulnerabilidades
+      # Paso 6: Ejecutar escaneo de Snyk para verificar vulnerabilidades usando el archivo packages.config
       - name: Run Snyk to check for vulnerabilities
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk test --severity-threshold=high --sarif-file-output=snyk.sarif --file=./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+        run: snyk test --severity-threshold=high --sarif-file-output=snyk.sarif --file=./Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/packages.config
 
-      # Generar reporte HTML a partir del archivo SARIF
+      # Paso 7: Generar reporte HTML a partir del archivo SARIF
       - name: Generate HTML report from SARIF
         run: |
           echo "<!DOCTYPE html>
@@ -69,14 +67,14 @@ jobs:
                   </thead>
                   <tbody>" > snyk_report.html
 
-          # Procesa el archivo SARIF para extraer los resultados
-          cat snyk.sarif | jq -r '.runs[].results[] | "<tr><td>\(.ruleId)</td><td>\(.level)</td><td>\(.message.text)</td><td>\(.locations[0].physicalLocation.artifactLocation.uri) (Línea \(.locations[0].physicalLocation.region.startLine))</td></tr>"' >> snyk_report.html
+          # Procesar el archivo SARIF y generar el HTML
+          cat snyk.sarif | jq -r '.runs[].results[] | "<tr><td>\(.ruleId)</td><td>\(.level)</td><td>\(.message.text)</td><td>\(.locations[0].physicalLocation.artifactLocation.uri // "N/A") (Línea \(.locations[0].physicalLocation.region.startLine // "N/A"))</td></tr>"' >> snyk_report.html
 
           echo "</tbody></table></body></html>" >> snyk_report.html
 
-      # Subir el reporte HTML como artefacto
+      # Paso 8: Subir el reporte HTML como artefacto
       - name: Upload HTML report as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # Actualizado a v4
         with:
           name: snyk-report
           path: snyk_report.html
