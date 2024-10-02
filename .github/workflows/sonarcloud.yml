@@ -25,7 +25,11 @@ jobs:
 
       - name: List files in the repository
         run: ls -R ./repo  
-        
+
+      # Paso para instalar MSBuild
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1  
+
       - name: Restore NuGet packages
         run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln  
 
@@ -34,7 +38,7 @@ jobs:
 
       - name: Ejecutar escaneo de SonarCloud
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # El token de SonarCloud como secreto de GitHub
         run: |
           dotnet sonarscanner begin /k:"${{ env.SONAR_PROJECT }}" /o:"${{ env.SONAR_ORG }}" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release  # Ruta correcta para el archivo de solución
