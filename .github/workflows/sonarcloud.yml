@@ -1,43 +1,43 @@
 
 name: SonarCloud analysis
 
+env:
+  DOTNET_VERSION: '4.8'                         # Versión de .NET Framework
+  SONAR_ORG: 'luis-caxi-calani'                 # Nombre de la organización en SonarCloud
+  SONAR_PROJECT: 'luis-caxi-calani_calidadrumi'     # Key ID del proyecto de SonarCloud
+
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
-  sonarcloud:
-    name: SonarCloud Scan
-    runs-on: ubuntu-latest  
+  sonarqube:
+    name: SonarCloud Analysis
+    runs-on: windows-latest                     
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          path: './'  
+        uses: actions/checkout@v4
 
-      - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v3
+      - name: Configurar .NET Framework 4.8
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '4.8.x' 
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
-      - name: Restore NuGet packages
+      - name: Verificar estructura de directorios
+        run: ls -la   
+
+      - name: Restaurar los paquetes NuGet
         run: nuget restore Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-      - name: Build the solution
-        run: msbuild Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
+      - name: Instalar Scanner de SonarCloud
+        run: dotnet tool install --global dotnet-sonarscanner
 
-      - name: Run SonarCloud Scan
+      - name: Ejecutar escaneo de SonarCloud
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # El token de SonarCloud como secreto de GitHub
         run: |
-          dotnet sonarscanner begin /k:"luis-caxi-calani_calidadrumi" \
-                                   /o:"luis-caxi-calani" \
-                                   /d:sonar.host.url="https://sonarcloud.io" \
-                                   /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-          msbuild Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+          dotnet sonarscanner begin /k:"${{ env.SONAR_PROJECT }}" /o:"${{ env.SONAR_ORG }}" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          msbuild Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
           dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
