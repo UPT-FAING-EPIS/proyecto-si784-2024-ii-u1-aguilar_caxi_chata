@@ -12,22 +12,18 @@ on:
 jobs:
   sonarcloud:
     name: SonarCloud Scan
-    runs-on: windows-latest  
+    runs-on: ubuntu-latest  
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           path: './'  
-          fetch-depth: 1
 
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1  
-
-      - name: Setup .NET Framework 4.8
+      - name: Setup .NET SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '4.8.x'  
+          dotnet-version: '4.8.x' 
 
       - name: Restore NuGet packages
         run: nuget restore Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
@@ -37,7 +33,7 @@ jobs:
 
       - name: Run SonarCloud Scan
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
         run: |
           dotnet sonarscanner begin /k:"luis-caxi-calani_calidadrumi" \
                                    /o:"luis-caxi-calani" \
