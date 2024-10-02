@@ -1,0 +1,44 @@
+
+name: SonarCloud analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sonarcloud:
+    name: SonarCloud Scan
+    runs-on: windows-latest  
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1  
+
+      - name: Setup .NET Framework 4.8
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '4.8.x'  
+
+      - name: Restore NuGet packages
+        run: nuget restore Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+
+      - name: Build the solution
+        run: msbuild Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
+
+      - name: Run SonarCloud Scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
+        run: |
+          dotnet sonarscanner begin /k:"luis-caxi-calani_calidadrumi" \
+                                   /o:"luis-caxi-calani" \
+                                   /d:sonar.host.url="https://sonarcloud.io" \
+                                   /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          msbuild Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+          dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
