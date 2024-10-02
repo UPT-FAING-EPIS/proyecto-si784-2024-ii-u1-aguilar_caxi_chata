@@ -1,63 +1,83 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# A sample workflow which sets up Snyk to analyze the full Snyk platform (Snyk Open Source, Snyk Code,
-# Snyk Container and Snyk Infrastructure as Code)
-# The setup installs the Snyk CLI - for more details on the possible commands
-# check https://docs.snyk.io/snyk-cli/cli-reference
-# The results of Snyk Code are then uploaded to GitHub Security Code Scanning
-#
-# In order to use the Snyk Action you will need to have a Snyk API token.
-# More details in https://github.com/snyk/actions#getting-your-snyk-token
-# or you can signup for free at https://snyk.io/login
-#
-# For more examples, including how to limit scans to only high-severity issues
-# and fail PR checks, see https://github.com/snyk/actions/
-
-name: Workflow for dotNET using Snyk
+name: Snyk Analysis
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
-  security:
-    runs-on: windows-latest  # Utiliza Windows ya que trabajas con .NET Framework
+  snyk:
+    name: Snyk Vulnerability Analysis
+    runs-on: windows-latest
 
     steps:
-      # Paso 1: Checkout del código fuente
-      - uses: actions/checkout@master
+      - name: Enable long paths in Git
+        run: git config --system core.longpaths true
 
-      # Paso 2: Instalar MSBuild
-      - name: Set up MSBuild
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          path: './repo'
+
+      - name: List files in the repository
+        run: ls -R ./repo
+
+      # Paso para instalar MSBuild
+      - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
 
-      # Paso 3: Restaurar paquetes NuGet usando el archivo de solución
       - name: Restore NuGet packages
-        run: nuget restore Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+        run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-      # Paso 4: Compilar el proyecto
-      - name: Build the solution
-        run: msbuild /t:build /p:Configuration=Release Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
-
-      # Paso 5: Instalar Snyk CLI en Windows
+      # Instalar la CLI de Snyk
       - name: Install Snyk CLI
         run: npm install -g snyk
 
-      # Paso 6: Ejecutar Snyk CLI para verificar vulnerabilidades
+      # Ejecutar escaneo de Snyk para verificar vulnerabilidades
       - name: Run Snyk to check for vulnerabilities
-        run: snyk test --severity-threshold=high --sarif-file-output=snyk.sarif --file=Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: snyk test --severity-threshold=high --sarif-file-output=snyk.sarif --file=./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-      # Paso 7: Subir los resultados a GitHub Code Scanning
-      - name: Upload SARIF result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v3
+      # Generar reporte HTML a partir del archivo SARIF
+      - name: Generate HTML report from SARIF
+        run: |
+          echo "<!DOCTYPE html>
+          <html lang='es'>
+          <head>
+              <meta charset='UTF-8'>
+              <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+              <title>Resultados de Vulnerabilidades</title>
+              <style>
+                  body { font-family: Arial, sans-serif; margin: 20px; }
+                  table { width: 100%; border-collapse: collapse; }
+                  th, td { border: 1px solid #ddd; padding: 8px; }
+                  th { background-color: #f2f2f2; }
+              </style>
+          </head>
+          <body>
+              <h1>Resultados de Vulnerabilidades</h1>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Regla ID</th>
+                          <th>Nivel</th>
+                          <th>Mensaje</th>
+                          <th>Ubicación</th>
+                      </tr>
+                  </thead>
+                  <tbody>" > snyk_report.html
+
+          # Procesa el archivo SARIF para extraer los resultados
+          cat snyk.sarif | jq -r '.runs[].results[] | "<tr><td>\(.ruleId)</td><td>\(.level)</td><td>\(.message.text)</td><td>\(.locations[0].physicalLocation.artifactLocation.uri) (Línea \(.locations[0].physicalLocation.region.startLine))</td></tr>"' >> snyk_report.html
+
+          echo "</tbody></table></body></html>" >> snyk_report.html
+
+      # Subir el reporte HTML como artefacto
+      - name: Upload HTML report as artifact
+        uses: actions/upload-artifact@v3
         with:
-          sarif_file: snyk.sarif
+          name: snyk-report
+          path: snyk_report.html
+
