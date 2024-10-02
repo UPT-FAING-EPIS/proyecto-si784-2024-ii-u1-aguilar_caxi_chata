@@ -17,23 +17,16 @@
 # For more information on the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
 
-name: Build and deploy ASP.NET Framework app to an Azure Web App
-
-env:
-  AZURE_WEBAPP_NAME: CalidadRumi    # Nombre de tu Azure Web App
-  AZURE_WEBAPP_PACKAGE_PATH: '.'    # Ruta del proyecto, en este caso, la raíz del repositorio
+name: Deploy ASP.NET App to Azure Web App via FTP
 
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   build:
-    runs-on: windows-latest  # Entorno Windows necesario para ASP.NET Framework
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -47,34 +40,17 @@ jobs:
       - name: Build with MSBuild
         run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
-      - name: Publish using MSBuild
-        run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml
+      - name: Create Release folder if not exist
+        run: mkdir -p Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
+      - name: List files in Release folder
+        run: dir Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release
+
+      - name: Deploy using FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          name: aspnet-app
-          path: Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release
-
-  deploy:
-    permissions:
-      contents: none
-    runs-on: windows-latest
-    needs: build
-    environment:
-      name: 'Development'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v3
-        with:
-          name: aspnet-app
-
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+          server: 'waws-prod-yt1-059.ftp.azurewebsites.windows.net'
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: './Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release/'
+          server-dir: '/site/wwwroot/'
