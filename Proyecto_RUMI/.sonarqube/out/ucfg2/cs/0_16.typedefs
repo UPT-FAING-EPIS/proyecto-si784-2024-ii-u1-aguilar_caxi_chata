@@ -1,11 +1,8 @@
-¦	
-OProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.ImagenProductoControllerSystem.Web.Mvc.ControllerSystem.Web.Mvc.ControllerBaseobjecth
-
-Index(int)ZProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.ImagenProductoController.Index(int)j
-Create(int)[Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.ImagenProductoController.Create(int)ñ
-NCreate(int, Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models.imagen_producto)žProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.ImagenProductoController.Create(int, Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models.imagen_producto)h
-
-Edit(int?)ZProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.ImagenProductoController.Edit(int?)ã
-GEdit(Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models.imagen_producto)—Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.ImagenProductoController.Edit(Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Models.imagen_producto)l
-Delete(int?)\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.ImagenProductoController.Delete(int?)ˆ
-ImagenProductoController()jProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.ImagenProductoController.ImagenProductoController()
+ù
+NProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.TransferenciaControllerSystem.Web.Mvc.ControllerSystem.Web.Mvc.ControllerBaseobjecta
+Index()VProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.TransferenciaController.Index()
+ListarTransferencias()eProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.TransferenciaController.ListarTransferencias()…
+DetalleTransferencia(int)hProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.TransferenciaController.DetalleTransferencia(int)k
+Transferir()[Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.TransferenciaController.Transferir()ƒ
+Transferir(int, decimal)gProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.TransferenciaController.Transferir(int, decimal)…
+TransferenciaController()hProyecto_Web2_Aguilar_Chino_Gonzales_Perez.Controllers.TransferenciaController.TransferenciaController()

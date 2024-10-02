@@ -1,5 +1,36 @@
 ú
-ôC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Properties\AssemblyInfo.csÅ	
+ôC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Properties\AssemblyInfo.csæ
+óC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\ModeloSistema2.cs
+
+ $
+
+. C
+
+  '
+
+ %
+
+( 7
+
+& 3
+
+" +
+
+( 7
+
+! )
+
+ )d
+9 E  "" && ** .. 22 66 :: 
+  
+  
+## ## 
+'' '' 
+++ ++ 
+// // 
+33 33 
+77 77 
+;; ;; Å	
 êC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\usuario.cs<
   44 66! (GG [[ ]] *
  PP tt 
@@ -80,7 +111,175 @@
 ±±  '
 
 ÆÆ= >
-ÆÆB CÍ
+ÆÆB CÔ
+ñC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\transferencia.cs"
+ &
+ÑÑ 
+ÜÜ )
+
+ #F
+ ::A J?? 'CCT ]ddA Jgg 'kkT ]R
+ ::& 1@@ )DDV add& 1hh )llV a
+åå& 1
+  AA &ii &
+
+ (
+ ;;2 7BB #jj #
+
+, @
+
+   &
+
+"" 'F
+&& (11 '33& 9GG) <[[ ']]& 9pp) <
+((  II $rr $
+)) &JJ (ss (
+** (KK *tt *
+++ $LL $uu $
+,, ,MM .vv .2
+-- "..- 2..> CNN !ww !
+
+.. )
+
+11) <(
+11A G::5 ;::N TMM@ F
+33 99 XX (
+77 99! #CC+ -DD- /
+::  ::$ %::? @
+;;+ ,;;0 1F
+==  !?? @@ AA BB CCR SDDT U
+CC= >CCB C
+CCf gCCk l
+DD? @DDD E
+DDj kDDo pZ
+GG  !II' (JJ+ ,KK- .LL' (MM1 2MMO PMMb cNN$ %
+
+[[) ;(
+[[@ Fdd5 ;ddN Tvv@ F 
+]] cc 
+ÅÅ (
+aa cc! #kk+ -ll- /
+dd  dd$ %dd? @F
+ee  !gg hh ii jj kkR SllT U
+kk= >kkB C
+kkf gkkk l
+ll? @llD E
+llj kllo p
+nn+ ,nn0 1Z
+pp  !rr' (ss+ ,tt- .uu' (vv1 2vvO Pvvb cww$ %
+
+ÑÑ $
+
+ÑÑ) +
+åå5 7$
+
+ÜÜ 
+ãã 
+îî 
+
+ââ 
+ãã 
+
+åå  
+åå$ % 
+óC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\LoginViewModel.cs
+
+		 
+
+ 
+
+ 
+
+ »
+ïC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\total_moneda.cs
+
+		 %
+
+ 
+
+ %
+
+ ,¢
+ïC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\tipo_usuario.cs<
+ %  $--	 BB DD $
+ "66 #ZZ 
+ JJ 
+, 4 
+
+ "
+ $$ 
+++
+ 
+"" $$ 
+
+-- 
+--" $66' )
+// 55 
+??
+ 
+33 55 
+66 66 
+
+BB "
+BB* 0JJ" (
+DD II 
+QQ
+ 
+GG II 
+JJ JJ 
+
+TT (
+XX \\ `` aa 
+
+ll 
+pp rr ss Ë
+èC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\Compra.cs(
+ DD FF! 'VV (
+ !((  **! -22/ ;
+ 44" %88. 1
+ 55" %99- 0
+ &66" -
+ __& /
+
+ <
+ %!!* 6!!A M00, 8114 @11O [
+
+!! &
+## 66= B
+&&2 ? 
+
+((" 4
+** // AA 
+-- // 
+00% &00* +
+11' (112 311M N(
+22& '44( )55( )660 1
+666 766; <
+88' (88, -
+99& '99+ ,
+
+DD "
+FF KK SS 
+II KK 
+
+VV 
+VV" $__3 5
+XX ]] gg 
+[[ ]] 
+__  __$ %ﬁ
+ìC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\sysdiagram.cs
+
+		 #
+
+ 
+
+ 
+
+ 
+
+ 
+
+  Í
 
 ëC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\producto.csP
  !AA CC  SS UU! )ff {{ }}  .
@@ -183,163 +382,7 @@
 ¡¡= >
 
 √√1 2
-√√6 7Ô
-ñC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\transferencia.cs"
- &
-ÑÑ 
-ÜÜ )
-
- #F
- ::A J?? 'CCT ]ddA Jgg 'kkT ]R
- ::& 1@@ )DDV add& 1hh )llV a
-åå& 1
-  AA &ii &
-
- (
- ;;2 7BB #jj #
-
-, @
-
-   &
-
-"" 'F
-&& (11 '33& 9GG) <[[ ']]& 9pp) <
-((  II $rr $
-)) &JJ (ss (
-** (KK *tt *
-++ $LL $uu $
-,, ,MM .vv .2
--- "..- 2..> CNN !ww !
-
-.. )
-
-11) <(
-11A G::5 ;::N TMM@ F
-33 99 XX (
-77 99! #CC+ -DD- /
-::  ::$ %::? @
-;;+ ,;;0 1F
-==  !?? @@ AA BB CCR SDDT U
-CC= >CCB C
-CCf gCCk l
-DD? @DDD E
-DDj kDDo pZ
-GG  !II' (JJ+ ,KK- .LL' (MM1 2MMO PMMb cNN$ %
-
-[[) ;(
-[[@ Fdd5 ;ddN Tvv@ F 
-]] cc 
-ÅÅ (
-aa cc! #kk+ -ll- /
-dd  dd$ %dd? @F
-ee  !gg hh ii jj kkR SllT U
-kk= >kkB C
-kkf gkkk l
-ll? @llD E
-llj kllo p
-nn+ ,nn0 1Z
-pp  !rr' (ss+ ,tt- .uu' (vv1 2vvO Pvvb cww$ %
-
-ÑÑ $
-
-ÑÑ) +
-åå5 7$
-
-ÜÜ 
-ãã 
-îî 
-
-ââ 
-ãã 
-
-åå  
-åå$ %æ
-óC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\ModeloSistema2.cs
-
- $
-
-. C
-
-  '
-
- %
-
-( 7
-
-& 3
-
-" +
-
-( 7
-
-! )
-
- )d
-9 E  "" && ** .. 22 66 :: 
-  
-  
-## ## 
-'' '' 
-++ ++ 
-// // 
-33 33 
-77 77 
-;; ;; ﬁ
-ìC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\sysdiagram.cs
-
-		 #
-
- 
-
- 
-
- 
-
- 
-
-  ¢
-ïC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\tipo_usuario.cs<
- %  $--	 BB DD $
- "66 #ZZ 
- JJ 
-, 4 
-
- "
- $$ 
-++
- 
-"" $$ 
-
--- 
---" $66' )
-// 55 
-??
- 
-33 55 
-66 66 
-
-BB "
-BB* 0JJ" (
-DD II 
-QQ
- 
-GG II 
-JJ JJ 
-
-TT (
-XX \\ `` aa 
-
-ll 
-pp rr ss »
-ïC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\total_moneda.cs
-
-		 %
-
- 
-
- %
-
- ,∂	
+√√6 7∂	
 ñC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\ModeloSistema.cs
 
  &
@@ -402,16 +445,26 @@
 mm mm 
 qq qq 
 uu uu 
-yy yy  
-óC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\LoginViewModel.cs
+yy yy ˘
+ñC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\DetalleCompra.cs
 
-		 
+
+
+ &
 
- 
+ 
 
- 
+ 
 
- ∂
+ 
+
+ 
+
+ 
+
+ $
+
+  (∂
 èC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\Fusion.cs
 
  
@@ -444,26 +497,34 @@
 ""0 2**( *
 $$ )) 11 
 '' )) 
-))5 6)): ;** ˘
-ñC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\DetalleCompra.cs
-
+))5 6)): ;** Â
+òC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\detalle_carrito.cs2
 
 
- &
+ ( #! 044 66 +
 
- 
+ %
+ "": D<<: D
+ ==! ,
 
- 
+ 
 
- 
+ &
+  ('') 1
 
- 
+% +
+0 2""H J(
+ !! %%, 111 
+ !! '' 
+""3 4""8 9
+((( )((- .
 
- 
-
- $
-
-  (›
+44 &
+44+ 5<<H R
+44; E==0 :
+66 ;; EE 
+99 ;; 
+<<3 4<<8 9==  ›
 íC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\favoritos.cs
 
 		 "
@@ -476,7 +537,41 @@
 
  '
 
-  ( 
+  (⁄
+ùC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\estado_transferencia.cs
+
+		 -
+
+ *
+
+ 
+2 @ ≠
+úC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\UserController.cs
+
+ n
+  5 7-- .. EE JJ5 7XX YY oo !qq rr 
+ " %
+
+ !
+   
+
+ "
+
+## "(
+##+ 2** ,, --( /
+'' 33 66( .
+
+??  
+??& (AA EE, .(
+EE FF JJj nKK 
+
+OO  2
+OO) 0VV XX! (__+ 2gg1 8
+SS __ bb( .
+
+kk "
+kk( *oo0 2
+oo pp qq  
 •C:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\TransferenciaController.cs
 
 
@@ -519,76 +614,7 @@
 ÉÉ 
 ]]? @]]D E
 ww %
-ÄÄ* 7Â
-òC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\detalle_carrito.cs2
-
-
- ( #! 044 66 +
-
- %
- "": D<<: D
- ==! ,
-
- 
-
- &
-  ('') 1
-
-% +
-0 2""H J(
- !! %%, 111 
- !! '' 
-""3 4""8 9
-((( )((- .
-
-44 &
-44+ 5<<H R
-44; E==0 :
-66 ;; EE 
-99 ;; 
-<<3 4<<8 9==  Ë
-èC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\Compra.cs(
- DD FF! 'VV (
- !((  **! -22/ ;
- 44" %88. 1
- 55" %99- 0
- &66" -
- __& /
-
- <
- %!!* 6!!A M00, 8114 @11O [
-
-!! &
-## 66= B
-&&2 ? 
-
-((" 4
-** // AA 
--- // 
-00% &00* +
-11' (112 311M N(
-22& '44( )55( )660 1
-666 766; <
-88' (88, -
-99& '99+ ,
-
-DD "
-FF KK SS 
-II KK 
-
-VV 
-VV" $__3 5
-XX ]] gg 
-[[ ]] 
-__  __$ %⁄
-ùC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\estado_transferencia.cs
-
-		 -
-
- *
-
- 
-2 @ Â
+ÄÄ* 7Â
 êC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Models\carrito.cs
    
 
@@ -619,7 +645,12 @@
 
  +
 
-  (…
+  (®
+çC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Global.asax.cs
+
+ 
+
+ (…
 ûC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\pruebaController.cs
 
  !
@@ -635,7 +666,22 @@
 & 2# /
   S c(
 7 8H IU Vj k
-   ! +ï
+   ! +≤
+ùC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\OrdenController.cs
+
+
+
+  
+
+  
+   # "
+
+ !
+  
+
+ #
+( *+ -
+  ï
 †C:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\ProductoController.cs
 
   Z
@@ -667,38 +713,7 @@
 
 rr "
 rr( *vv5 7
-vv !ww xx !®
-çC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Global.asax.cs
-
- 
-
- (≠
-úC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\UserController.cs
-
- n
-  5 7-- .. EE JJ5 7XX YY oo !qq rr 
- " %
-
- !
-   
-
- "
-
-## "(
-##+ 2** ,, --( /
-'' 33 66( .
-
-??  
-??& (AA EE, .(
-EE FF JJj nKK 
-
-OO  2
-OO) 0VV XX! (__+ 2gg1 8
-SS __ bb( .
-
-kk "
-kk( *oo0 2
-oo pp qq Ì
+vv !ww xx !Ì
 ¶C:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\ImagenProductoController.cs
 
  &d
@@ -726,22 +741,7 @@
 
 cc "
 cc( *ggJ L(
-gg  /hh ii (llJ Y≤
-ùC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\OrdenController.cs
-
-
-
-  
-
-  
-   # "
-
- !
-  
-
- #
-( *+ -
-  ß
+gg  /hh ii (llJ Yß
 úC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\Controllers\HomeController.cs
 
  
@@ -828,15 +828,7 @@
    !! ##6 :$$& *%%* .&&* .
   6 7  ; <  [ \
 
-.. "“
-óC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\App_Start\RouteConfig.cs
-
-
-
- 
-
- )
-: @  …
+.. "…
 òC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\App_Start\FilterConfig.cs
 
  
@@ -844,7 +836,15 @@
  0
 H O
 
- Ò
+ “
+óC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\App_Start\RouteConfig.cs
+
+
+
+ 
+
+ )
+: @  Ò
 òC:\Users\Stryker\Desktop\proyecto-si784-2024-ii-u1-aguilar_caxi_chata\Proyecto_RUMI\Proyecto_Web2_Aguilar_Chino_Gonzales_Perez\App_Start\BundleConfig.cs
 
  

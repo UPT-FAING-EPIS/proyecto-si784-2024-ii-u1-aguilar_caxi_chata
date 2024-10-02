@@ -18,32 +18,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CarritoController.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
                 "region": {
-                  "startLine": 47,
+                  "startLine": 56,
                   "startColumn": 30,
-                  "endLine": 47,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 3
-          }
-        },
-        {
-          "ruleId": "CS0168",
-          "level": "warning",
-          "message": "La variable 'ex' se ha declarado pero nunca se usa",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CanjeController.cs",
-                "region": {
-                  "startLine": 75,
-                  "startColumn": 30,
-                  "endLine": 75,
+                  "endLine": 56,
                   "endColumn": 32
                 }
               }
@@ -62,9 +41,30 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
                 "region": {
-                  "startLine": 56,
+                  "startLine": 100,
                   "startColumn": 30,
-                  "endLine": 56,
+                  "endLine": 100,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "La variable 'ex' se ha declarado pero nunca se usa",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
+                "region": {
+                  "startLine": 119,
+                  "startColumn": 30,
+                  "endLine": 119,
                   "endColumn": 32
                 }
               }
@@ -123,11 +123,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
                 "region": {
-                  "startLine": 100,
+                  "startLine": 126,
                   "startColumn": 30,
-                  "endLine": 100,
+                  "endLine": 126,
                   "endColumn": 32
                 }
               }
@@ -144,11 +144,32 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CarritoController.cs",
                 "region": {
-                  "startLine": 119,
+                  "startLine": 47,
                   "startColumn": 30,
-                  "endLine": 119,
+                  "endLine": 47,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "La variable 'ex' se ha declarado pero nunca se usa",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CanjeController.cs",
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 30,
+                  "endLine": 75,
                   "endColumn": 32
                 }
               }
@@ -222,27 +243,6 @@
           }
         },
         {
-          "ruleId": "CS0168",
-          "level": "warning",
-          "message": "La variable 'ex' se ha declarado pero nunca se usa",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 126,
-                  "startColumn": 30,
-                  "endLine": 126,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 3
-          }
-        },
-        {
           "ruleId": "S2068",
           "level": "warning",
           "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
@@ -291,54 +291,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/App_Start/FilterConfig.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/App_Start/RouteConfig.cs",
                 "region": {
-                  "startLine": 6,
+                  "startLine": 10,
                   "startColumn": 18,
-                  "endLine": 6,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'db' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/AccountController.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 31,
-                  "endLine": 14,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S101",
-          "level": "warning",
-          "message": "Rename class 'calificacion_producto' to match pascal case naming rules, consider using 'Calificacionproducto'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/calificacion_producto.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 26,
-                  "endLine": 9,
-                  "endColumn": 47
+                  "endLine": 10,
+                  "endColumn": 29
                 }
               }
             }
@@ -354,12 +312,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/App_Start/RouteConfig.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/App_Start/FilterConfig.cs",
                 "region": {
-                  "startLine": 10,
+                  "startLine": 6,
                   "startColumn": 18,
-                  "endLine": 10,
-                  "endColumn": 29
+                  "endLine": 6,
+                  "endColumn": 30
                 }
               }
             }
@@ -438,75 +396,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CanjeController.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/AccountController.cs",
                 "region": {
-                  "startLine": 12,
+                  "startLine": 14,
                   "startColumn": 31,
-                  "endLine": 12,
+                  "endLine": 14,
                   "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'objProducto' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CanjeController.cs",
-                "region": {
-                  "startLine": 13,
-                  "startColumn": 26,
-                  "endLine": 13,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S101",
-          "level": "warning",
-          "message": "Rename class 'carrito' to match pascal case naming rules, consider using 'Carrito'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/carrito.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 26,
-                  "endLine": 11,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S101",
-          "level": "warning",
-          "message": "Rename class 'detalle_carrito' to match pascal case naming rules, consider using 'Detallecarrito'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 26,
-                  "endLine": 10,
-                  "endColumn": 41
                 }
               }
             }
@@ -638,6 +533,90 @@
           }
         },
         {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'calificacion_producto' to match pascal case naming rules, consider using 'Calificacionproducto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/calificacion_producto.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 26,
+                  "endLine": 9,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'db' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CanjeController.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 31,
+                  "endLine": 12,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'objProducto' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CanjeController.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 26,
+                  "endLine": 13,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/App_Start/BundleConfig.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 18,
+                  "endLine": 6,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S2933",
           "level": "warning",
           "message": "Make 'objTransferencia' 'readonly'.",
@@ -680,121 +659,6 @@
           }
         },
         {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'UserID' 5 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
-                "region": {
-                  "startLine": 20,
-                  "startColumn": 25,
-                  "endLine": 20,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 50,
-                  "endLine": 24,
-                  "endColumn": 58
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
-                "region": {
-                  "startLine": 39,
-                  "startColumn": 25,
-                  "endLine": 39,
-                  "endColumn": 33
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
-                "region": {
-                  "startLine": 45,
-                  "startColumn": 25,
-                  "endLine": 45,
-                  "endColumn": 33
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
-                "region": {
-                  "startLine": 49,
-                  "startColumn": 50,
-                  "endLine": 49,
-                  "endColumn": 58
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null,
-              "3": null
-            }
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'db' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/OrdenController.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 31,
-                  "endLine": 12,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'objCompra' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/OrdenController.cs",
-                "region": {
-                  "startLine": 13,
-                  "startColumn": 24,
-                  "endLine": 13,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S2933",
           "level": "warning",
           "message": "Make 'db' 'readonly'.",
@@ -807,69 +671,6 @@
                   "startColumn": 25,
                   "endLine": 13,
                   "endColumn": 27
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'db' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 31,
-                  "endLine": 14,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'objProducto' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 15,
-                  "startColumn": 26,
-                  "endLine": 15,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'objImagenProducto' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 16,
-                  "startColumn": 33,
-                  "endLine": 16,
-                  "endColumn": 50
                 }
               }
             }
@@ -942,18 +743,18 @@
           }
         },
         {
-          "ruleId": "S1144",
+          "ruleId": "S2933",
           "level": "warning",
-          "message": "Remove the unused private field 'db'.",
+          "message": "Make 'db' 'readonly'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/OrdenController.cs",
                 "region": {
                   "startLine": 12,
-                  "startColumn": 9,
+                  "startColumn": 31,
                   "endLine": 12,
-                  "endColumn": 56
+                  "endColumn": 33
                 }
               }
             }
@@ -963,146 +764,24 @@
           }
         },
         {
-          "ruleId": "S101",
+          "ruleId": "S2933",
           "level": "warning",
-          "message": "Rename class 'pruebaController' to match pascal case naming rules, consider using 'PruebaController'.",
+          "message": "Make 'objCompra' 'readonly'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/pruebaController.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/OrdenController.cs",
                 "region": {
-                  "startLine": 11,
-                  "startColumn": 18,
-                  "endLine": 11,
-                  "endColumn": 34
+                  "startLine": 13,
+                  "startColumn": 24,
+                  "endLine": 13,
+                  "endColumn": 33
                 }
               }
             }
           ],
           "properties": {
             "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'ErrorMessage' 4 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 58,
-                  "startColumn": 34,
-                  "endLine": 58,
-                  "endColumn": 48
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 66,
-                  "startColumn": 26,
-                  "endLine": 66,
-                  "endColumn": 40
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 101,
-                  "startColumn": 34,
-                  "endLine": 101,
-                  "endColumn": 48
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 109,
-                  "startColumn": 26,
-                  "endLine": 109,
-                  "endColumn": 40
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'Revise si la información es correcta.' 4 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 58,
-                  "startColumn": 52,
-                  "endLine": 58,
-                  "endColumn": 91
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 66,
-                  "startColumn": 44,
-                  "endLine": 66,
-                  "endColumn": 83
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 101,
-                  "startColumn": 52,
-                  "endLine": 101,
-                  "endColumn": 91
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
-                "region": {
-                  "startLine": 109,
-                  "startColumn": 44,
-                  "endLine": 109,
-                  "endColumn": 83
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
           }
         },
         {
@@ -1252,6 +931,205 @@
           }
         },
         {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'UserID' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 25,
+                  "endLine": 20,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 50,
+                  "endLine": 24,
+                  "endColumn": 58
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 25,
+                  "endLine": 39,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 25,
+                  "endLine": 45,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/HomeController.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 50,
+                  "endLine": 49,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'db' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 31,
+                  "endLine": 14,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'objProducto' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 26,
+                  "endLine": 15,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'objImagenProducto' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 33,
+                  "endLine": 16,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'detalle_carrito' to match pascal case naming rules, consider using 'Detallecarrito'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 26,
+                  "endLine": 10,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private field 'db'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/OrdenController.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 9,
+                  "endLine": 12,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'pruebaController' to match pascal case naming rules, consider using 'PruebaController'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/pruebaController.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 18,
+                  "endLine": 11,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S2933",
           "level": "warning",
           "message": "Make 'objTransferencia' 'readonly'.",
@@ -1264,6 +1142,48 @@
                   "startColumn": 31,
                   "endLine": 12,
                   "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'db' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 31,
+                  "endLine": 14,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'objUsuario' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 25,
+                  "endLine": 15,
+                  "endColumn": 35
                 }
               }
             }
@@ -1731,69 +1651,6 @@
           }
         },
         {
-          "ruleId": "S101",
-          "level": "warning",
-          "message": "Rename class 'favoritos' to match pascal case naming rules, consider using 'Favoritos'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/favoritos.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 26,
-                  "endLine": 9,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'db' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 31,
-                  "endLine": 14,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make 'objUsuario' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/UserController.cs",
-                "region": {
-                  "startLine": 15,
-                  "startColumn": 25,
-                  "endLine": 15,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S1192",
           "level": "warning",
           "message": "Define a constant instead of using this literal 'ErrorMessage' 4 times.",
@@ -1857,16 +1714,159 @@
         {
           "ruleId": "S101",
           "level": "warning",
-          "message": "Rename class 'sysdiagram' to match pascal case naming rules, consider using 'Sysdiagram'.",
+          "message": "Rename class 'favoritos' to match pascal case naming rules, consider using 'Favoritos'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/sysdiagram.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/favoritos.cs",
                 "region": {
                   "startLine": 9,
                   "startColumn": 26,
                   "endLine": 9,
-                  "endColumn": 36
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'ErrorMessage' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 34,
+                  "endLine": 58,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 26,
+                  "endLine": 66,
+                  "endColumn": 40
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 34,
+                  "endLine": 101,
+                  "endColumn": 48
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 26,
+                  "endLine": 109,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Revise si la información es correcta.' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 52,
+                  "endLine": 58,
+                  "endColumn": 91
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 44,
+                  "endLine": 66,
+                  "endColumn": 83
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 52,
+                  "endLine": 101,
+                  "endColumn": 91
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/ProductoController.cs",
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 44,
+                  "endLine": 109,
+                  "endColumn": 83
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'imagen_producto' to match pascal case naming rules, consider using 'Imagenproducto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/imagen_producto.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 26,
+                  "endLine": 10,
+                  "endColumn": 41
                 }
               }
             }
@@ -1878,16 +1878,16 @@
         {
           "ruleId": "S101",
           "level": "warning",
-          "message": "Rename class 'producto' to match pascal case naming rules, consider using 'Producto'.",
+          "message": "Rename class 'carrito' to match pascal case naming rules, consider using 'Carrito'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/carrito.cs",
                 "region": {
-                  "startLine": 12,
+                  "startLine": 11,
                   "startColumn": 26,
-                  "endLine": 12,
-                  "endColumn": 34
+                  "endLine": 11,
+                  "endColumn": 33
                 }
               }
             }
@@ -1909,6 +1909,27 @@
                   "startColumn": 26,
                   "endLine": 9,
                   "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'producto' to match pascal case naming rules, consider using 'Producto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 26,
+                  "endLine": 12,
+                  "endColumn": 34
                 }
               }
             }
@@ -1981,48 +2002,6 @@
         {
           "ruleId": "S101",
           "level": "warning",
-          "message": "Rename class 'imagen_producto' to match pascal case naming rules, consider using 'Imagenproducto'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/imagen_producto.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 26,
-                  "endLine": 10,
-                  "endColumn": 41
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S101",
-          "level": "warning",
-          "message": "Rename class 'tipo_usuario' to match pascal case naming rules, consider using 'Tipousuario'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 26,
-                  "endLine": 11,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S101",
-          "level": "warning",
           "message": "Rename class 'transferencia' to match pascal case naming rules, consider using 'Transferencia'.",
           "locations": [
             {
@@ -2033,27 +2012,6 @@
                   "startColumn": 26,
                   "endLine": 13,
                   "endColumn": 39
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/App_Start/BundleConfig.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 18,
-                  "endLine": 6,
-                  "endColumn": 30
                 }
               }
             }
@@ -2084,6 +2042,48 @@
           }
         },
         {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'sysdiagram' to match pascal case naming rules, consider using 'Sysdiagram'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/sysdiagram.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 26,
+                  "endLine": 9,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'tipo_usuario' to match pascal case naming rules, consider using 'Tipousuario'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 26,
+                  "endLine": 11,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S2737",
           "level": "warning",
           "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
@@ -2095,6 +2095,48 @@
                   "startLine": 64,
                   "startColumn": 13,
                   "endLine": 67,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/imagen_producto.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 13,
+                  "endLine": 48,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 13,
+                  "endLine": 48,
                   "endColumn": 14
                 }
               }
@@ -2126,6 +2168,48 @@
           }
         },
         {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/imagen_producto.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 17,
+                  "endLine": 36,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Listar' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/imagen_producto.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 38,
+                  "endLine": 34,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S2325",
           "level": "warning",
           "message": "Make 'Listar' a static method.",
@@ -2138,6 +2222,174 @@
                   "startColumn": 30,
                   "endLine": 52,
                   "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Listar' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 38,
+                  "endLine": 26,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 13,
+                  "endLine": 64,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/carrito.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 13,
+                  "endLine": 50,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/carrito.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 17,
+                  "endLine": 32,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 17,
+                  "endLine": 42,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Listar' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/carrito.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 24,
+                  "endLine": 30,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'userID'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/TransferenciaController.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 17,
+                  "endLine": 20,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'usertype'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/TransferenciaController.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 20,
+                  "endLine": 22,
+                  "endColumn": 28
                 }
               }
             }
@@ -2210,6 +2462,90 @@
           }
         },
         {
+          "ruleId": "S2259",
+          "level": "warning",
+          "message": "'emisor' is null on at least one execution path.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/TransferenciaController.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 47,
+                  "endLine": 87,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 13,
+                  "endLine": 82,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
+                "region": {
+                  "startLine": 99,
+                  "startColumn": 13,
+                  "endLine": 102,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 17,
+                  "endLine": 70,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S2737",
           "level": "warning",
           "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
@@ -2237,12 +2573,75 @@
           "locations": [
             {
               "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 17,
+                  "endLine": 88,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Listar' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 29,
+                  "endLine": 68,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/usuario.cs",
                 "region": {
                   "startLine": 93,
                   "startColumn": 8,
                   "endLine": 93,
                   "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Obtener' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 23,
+                  "endLine": 86,
+                  "endColumn": 30
                 }
               }
             }
@@ -2315,132 +2714,6 @@
           }
         },
         {
-          "ruleId": "S1481",
-          "level": "warning",
-          "message": "Remove the unused local variable 'userID'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/TransferenciaController.cs",
-                "region": {
-                  "startLine": 20,
-                  "startColumn": 17,
-                  "endLine": 20,
-                  "endColumn": 23
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1481",
-          "level": "warning",
-          "message": "Remove the unused local variable 'usertype'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/TransferenciaController.cs",
-                "region": {
-                  "startLine": 22,
-                  "startColumn": 20,
-                  "endLine": 22,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/carrito.cs",
-                "region": {
-                  "startLine": 47,
-                  "startColumn": 13,
-                  "endLine": 50,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/carrito.cs",
-                "region": {
-                  "startLine": 32,
-                  "startColumn": 17,
-                  "endLine": 32,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1117",
-          "level": "warning",
-          "message": "Rename 'db' which hides the field with the same name.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CarritoController.cs",
-                "region": {
-                  "startLine": 59,
-                  "startColumn": 28,
-                  "endLine": 59,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Listar' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/carrito.cs",
-                "region": {
-                  "startLine": 30,
-                  "startColumn": 24,
-                  "endLine": 30,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S2737",
           "level": "warning",
           "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
@@ -2453,90 +2726,6 @@
                   "startColumn": 13,
                   "endLine": 163,
                   "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/imagen_producto.cs",
-                "region": {
-                  "startLine": 45,
-                  "startColumn": 13,
-                  "endLine": 48,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/usuario.cs",
-                "region": {
-                  "startLine": 181,
-                  "startColumn": 13,
-                  "endLine": 184,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
-                "region": {
-                  "startLine": 45,
-                  "startColumn": 13,
-                  "endLine": 48,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/imagen_producto.cs",
-                "region": {
-                  "startLine": 36,
-                  "startColumn": 17,
-                  "endLine": 36,
-                  "endColumn": 52
                 }
               }
             }
@@ -2567,18 +2756,18 @@
           }
         },
         {
-          "ruleId": "S2325",
+          "ruleId": "S2737",
           "level": "warning",
-          "message": "Make 'Listar' a static method.",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/imagen_producto.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/usuario.cs",
                 "region": {
-                  "startLine": 34,
-                  "startColumn": 38,
-                  "endLine": 34,
-                  "endColumn": 44
+                  "startLine": 181,
+                  "startColumn": 13,
+                  "endLine": 184,
+                  "endColumn": 14
                 }
               }
             }
@@ -2630,270 +2819,18 @@
           }
         },
         {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Listar' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
-                "region": {
-                  "startLine": 26,
-                  "startColumn": 38,
-                  "endLine": 26,
-                  "endColumn": 44
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2259",
-          "level": "warning",
-          "message": "'emisor' is null on at least one execution path.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/TransferenciaController.cs",
-                "region": {
-                  "startLine": 87,
-                  "startColumn": 47,
-                  "endLine": 87,
-                  "endColumn": 53
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S2737",
           "level": "warning",
           "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
                 "region": {
-                  "startLine": 65,
+                  "startLine": 95,
                   "startColumn": 13,
-                  "endLine": 68,
+                  "endLine": 98,
                   "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 17,
-                  "endLine": 54,
-                  "endColumn": 46
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
-                "region": {
-                  "startLine": 79,
-                  "startColumn": 13,
-                  "endLine": 82,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
-                "region": {
-                  "startLine": 99,
-                  "startColumn": 13,
-                  "endLine": 102,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
-                "region": {
-                  "startLine": 61,
-                  "startColumn": 13,
-                  "endLine": 64,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
-                "region": {
-                  "startLine": 70,
-                  "startColumn": 17,
-                  "endLine": 70,
-                  "endColumn": 43
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
-                "region": {
-                  "startLine": 88,
-                  "startColumn": 17,
-                  "endLine": 88,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
-                "region": {
-                  "startLine": 42,
-                  "startColumn": 17,
-                  "endLine": 42,
-                  "endColumn": 49
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Listar' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
-                "region": {
-                  "startLine": 68,
-                  "startColumn": 29,
-                  "endLine": 68,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Obtener' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/Compra.cs",
-                "region": {
-                  "startLine": 86,
-                  "startColumn": 23,
-                  "endLine": 86,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Obtener' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
-                "region": {
-                  "startLine": 52,
-                  "startColumn": 32,
-                  "endLine": 52,
-                  "endColumn": 39
                 }
               }
             }
@@ -2932,220 +2869,10 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
                 "region": {
-                  "startLine": 67,
-                  "startColumn": 8,
-                  "endLine": 67,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
-                "region": {
-                  "startLine": 39,
-                  "startColumn": 4,
-                  "endLine": 42,
-                  "endColumn": 5
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
-                "region": {
-                  "startLine": 95,
-                  "startColumn": 13,
-                  "endLine": 98,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
-                "region": {
-                  "startLine": 31,
-                  "startColumn": 8,
-                  "endLine": 31,
-                  "endColumn": 40
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
-                "region": {
                   "startLine": 85,
                   "startColumn": 17,
                   "endLine": 85,
                   "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Listar' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 29,
-                  "endLine": 29,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Listar' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
-                "region": {
-                  "startLine": 65,
-                  "startColumn": 25,
-                  "endLine": 65,
-                  "endColumn": 31
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2971",
-          "level": "warning",
-          "message": "Use 'AsEnumerable' here instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
-                "region": {
-                  "startLine": 70,
-                  "startColumn": 26,
-                  "endLine": 70,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'ListarTodos' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
-                "region": {
-                  "startLine": 83,
-                  "startColumn": 31,
-                  "endLine": 83,
-                  "endColumn": 42
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1854",
-          "level": "warning",
-          "message": "Remove this useless assignment to local variable 'resultados'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
-                "region": {
-                  "startLine": 51,
-                  "startColumn": 17,
-                  "endLine": 51,
-                  "endColumn": 61
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
-                "region": {
-                  "startLine": 59,
-                  "startColumn": 4,
-                  "endLine": 62,
-                  "endColumn": 5
                 }
               }
             }
@@ -3182,12 +2909,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
                 "region": {
-                  "startLine": 47,
+                  "startLine": 67,
                   "startColumn": 8,
-                  "endLine": 47,
-                  "endColumn": 34
+                  "endLine": 67,
+                  "endColumn": 36
                 }
               }
             }
@@ -3197,18 +2924,18 @@
           }
         },
         {
-          "ruleId": "S2737",
+          "ruleId": "S2325",
           "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "message": "Make 'ListarTodos' a static method.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
                 "region": {
-                  "startLine": 77,
-                  "startColumn": 4,
-                  "endLine": 80,
-                  "endColumn": 5
+                  "startLine": 83,
+                  "startColumn": 31,
+                  "endLine": 83,
+                  "endColumn": 42
                 }
               }
             }
@@ -3266,12 +2993,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
                 "region": {
-                  "startLine": 68,
+                  "startLine": 125,
                   "startColumn": 8,
-                  "endLine": 68,
-                  "endColumn": 40
+                  "endLine": 125,
+                  "endColumn": 36
                 }
               }
             }
@@ -3281,18 +3008,18 @@
           }
         },
         {
-          "ruleId": "S1854",
+          "ruleId": "S2325",
           "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
+          "message": "Make 'Listar' a static method.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
                 "region": {
-                  "startLine": 125,
-                  "startColumn": 8,
-                  "endLine": 125,
-                  "endColumn": 36
+                  "startLine": 65,
+                  "startColumn": 25,
+                  "endLine": 65,
+                  "endColumn": 31
                 }
               }
             }
@@ -3344,18 +3071,144 @@
           }
         },
         {
-          "ruleId": "S2325",
+          "ruleId": "S2737",
           "level": "warning",
-          "message": "Make 'Buscar' a static method.",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
+                "region": {
+                  "startLine": 159,
+                  "startColumn": 4,
+                  "endLine": 162,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
                 "region": {
-                  "startLine": 66,
+                  "startLine": 39,
+                  "startColumn": 4,
+                  "endLine": 42,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
+                "region": {
+                  "startLine": 175,
+                  "startColumn": 4,
+                  "endLine": 178,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 8,
+                  "endLine": 31,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 4,
+                  "endLine": 62,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Listar' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "region": {
+                  "startLine": 29,
                   "startColumn": 29,
-                  "endLine": 66,
+                  "endLine": 29,
                   "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 8,
+                  "endLine": 47,
+                  "endColumn": 34
                 }
               }
             }
@@ -3394,10 +3247,73 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
                 "region": {
+                  "startLine": 77,
+                  "startColumn": 4,
+                  "endLine": 80,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 8,
+                  "endLine": 68,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "region": {
                   "startLine": 101,
                   "startColumn": 4,
                   "endLine": 104,
                   "endColumn": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Buscar' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/tipo_usuario.cs",
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 29,
+                  "endLine": 66,
+                  "endColumn": 35
                 }
               }
             }
@@ -3428,48 +3344,6 @@
           }
         },
         {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
-                "region": {
-                  "startLine": 159,
-                  "startColumn": 4,
-                  "endLine": 162,
-                  "endColumn": 5
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2737",
-          "level": "warning",
-          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
-                "region": {
-                  "startLine": 175,
-                  "startColumn": 4,
-                  "endLine": 178,
-                  "endColumn": 5
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S2971",
           "level": "warning",
           "message": "Use 'AsEnumerable' here instead.",
@@ -3478,9 +3352,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
                 "region": {
-                  "startLine": 111,
+                  "startLine": 70,
                   "startColumn": 26,
-                  "endLine": 111,
+                  "endLine": 70,
                   "endColumn": 32
                 }
               }
@@ -3491,18 +3365,60 @@
           }
         },
         {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'resultados'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 17,
+                  "endLine": 51,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S2737",
           "level": "warning",
           "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
                 "region": {
-                  "startLine": 144,
+                  "startLine": 65,
                   "startColumn": 13,
-                  "endLine": 147,
+                  "endLine": 68,
                   "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 17,
+                  "endLine": 54,
+                  "endColumn": 46
                 }
               }
             }
@@ -3539,12 +3455,54 @@
           "locations": [
             {
               "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
+                "region": {
+                  "startLine": 183,
+                  "startColumn": 17,
+                  "endLine": 183,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Obtener' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/detalle_carrito.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 32,
+                  "endLine": 52,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2971",
+          "level": "warning",
+          "message": "Use 'AsEnumerable' here instead.",
+          "locations": [
+            {
+              "resultFile": {
                 "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
                 "region": {
-                  "startLine": 134,
-                  "startColumn": 17,
-                  "endLine": 134,
-                  "endColumn": 44
+                  "startLine": 111,
+                  "startColumn": 26,
+                  "endLine": 111,
+                  "endColumn": 32
                 }
               }
             }
@@ -3575,39 +3533,18 @@
           }
         },
         {
-          "ruleId": "S1854",
+          "ruleId": "S1117",
           "level": "warning",
-          "message": "Remove this useless assignment to local variable 'query'.",
+          "message": "Rename 'db' which hides the field with the same name.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/producto.cs",
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Controllers/CarritoController.cs",
                 "region": {
-                  "startLine": 183,
-                  "startColumn": 17,
-                  "endLine": 183,
-                  "endColumn": 55
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Detalle' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
-                "region": {
-                  "startLine": 132,
-                  "startColumn": 30,
-                  "endLine": 132,
-                  "endColumn": 37
+                  "startLine": 59,
+                  "startColumn": 28,
+                  "endLine": 59,
+                  "endColumn": 30
                 }
               }
             }
@@ -3629,6 +3566,69 @@
                   "startColumn": 23,
                   "endLine": 85,
                   "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2737",
+          "level": "warning",
+          "message": "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
+                "region": {
+                  "startLine": 144,
+                  "startColumn": 13,
+                  "endLine": 147,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'query'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
+                "region": {
+                  "startLine": 134,
+                  "startColumn": 17,
+                  "endLine": 134,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Detalle' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Stryker/Desktop/proyecto-si784-2024-ii-u1-aguilar_caxi_chata/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Models/transferencia.cs",
+                "region": {
+                  "startLine": 132,
+                  "startColumn": 30,
+                  "endLine": 132,
+                  "endColumn": 37
                 }
               }
             }

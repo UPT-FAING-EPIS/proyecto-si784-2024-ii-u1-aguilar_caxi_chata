@@ -182,7 +182,9 @@ Automatic Analysis will not be available between 07:00 CET and 09:00 CET</Proper
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">https://sonarcloud.io</Property>
+    <Property Name="sonar.cs.opencover.reportsPaths">*/*/*/coverage.opencover.xml</Property>
     <Property Name="sonar.organization">luis-caxi-calani</Property>
+    <Property Name="sonar.exclusions">*/*/*/coverage.opencover.xml</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>
