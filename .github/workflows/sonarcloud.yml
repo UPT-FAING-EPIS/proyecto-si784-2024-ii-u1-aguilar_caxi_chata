@@ -1,8 +1,7 @@
 
 name: SonarCloud analysis
 
-env:
-  DOTNET_VERSION: '4.8'                         # Versión de .NET Framework
+env:                     
   SONAR_ORG: 'luis-caxi-calani'                 # Nombre de la organización en SonarCloud
   SONAR_PROJECT: 'luis-caxi-calani_calidadrumi'     # Key ID del proyecto de SonarCloud
 
@@ -24,14 +23,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: './repo'
-
-      - name: Configurar .NET Framework 4.8
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
-
-      - name: Verificar estructura de directorios
-        run: ls -la   
 
       - name: Restaurar los paquetes NuGet
         run: nuget restore Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
