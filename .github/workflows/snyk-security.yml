@@ -1,5 +1,6 @@
 name: Snyk Analysis
 
+
 on:
   push:
     branches: [ "main" ]
@@ -16,14 +17,14 @@ jobs:
         run: git config --system core.longpaths true
 
       - name: Checkout repository
-        uses: actions/checkout@v4  # Actualización a v4
-
+        uses: actions/checkout@v3
+        with:
+          path: './repo'
       - name: List files in the repository
         run: ls -R ./repo
-
       # Paso para instalar MSBuild
       - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v2  # Actualización a v2
+        uses: microsoft/setup-msbuild@v1
 
       - name: Restore NuGet packages
         run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
@@ -66,15 +67,12 @@ jobs:
                       </tr>
                   </thead>
                   <tbody>" > snyk_report.html
-
           # Procesa el archivo SARIF para extraer los resultados
           cat snyk.sarif | jq -r '.runs[].results[] | "<tr><td>\(.ruleId)</td><td>\(.level)</td><td>\(.message.text)</td><td>\(.locations[0].physicalLocation.artifactLocation.uri) (Línea \(.locations[0].physicalLocation.region.startLine))</td></tr>"' >> snyk_report.html
-
           echo "</tbody></table></body></html>" >> snyk_report.html
-
       # Subir el reporte HTML como artefacto
       - name: Upload HTML report as artifact
-        uses: actions/upload-artifact@v4  # Actualización a v4
+        uses: actions/upload-artifact@v3
         with:
           name: snyk-report
           path: snyk_report.html
