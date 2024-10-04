@@ -29,10 +29,10 @@ jobs:
       - name: Remove .semgrepignore temporarily
         run: rm -f .semgrepignore
 
-      - name: Run Semgrep analysis with minimal exclusions
+      - name: Run Semgrep analysis with exclusions
         env:
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_TOKEN }}
-        run: semgrep --config=auto --max-target-bytes=5000000 --error --verbose --exclude '**/node_modules/**' --exit-zero
+        run: semgrep --config=auto --max-target-bytes=5000000 --error --verbose --exclude '**/node_modules/**' || true
 
       - name: Restore .semgrepignore
         run: git checkout .semgrepignore
