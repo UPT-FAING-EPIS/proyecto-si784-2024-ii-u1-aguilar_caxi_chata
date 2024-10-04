@@ -4,12 +4,10 @@ name: Deploy ASP.NET Project to Azure
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
-# Definición de trabajos (jobs) en el workflow
 jobs:
-  build:
+  build-and-deploy:
     runs-on: windows-latest
 
     steps:
@@ -23,19 +21,25 @@ jobs:
       with:
         path: './repo'
 
-    # 3. Verificar la estructura del repositorio y el perfil de publicación
-    - name: Verify Publish Profile Path
-      run: ls -R ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Properties/PublishProfiles
-
-    # 4. Restaurar paquetes NuGet
+    # 3. Restaurar paquetes NuGet
     - name: Restore NuGet packages
       run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-    # 5. Compilar con MSBuild
+    # 4. Compilar el proyecto con MSBuild
     - name: Build with MSBuild
       run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
-    # 6. Publicar usando MSBuild y especificar el perfil de publicación
+    # 5. Publicar usando MSBuild con el perfil de publicación
     - name: Publish using MSBuild
-      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml /p:WebPublishMethod=Package /p:PackageLocation="$(System.DefaultWorkingDirectory)/publish_output" /verbosity:detailed
+      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml /p:WebPublishMethod=MSDeploy /p:UserName="$(UserName)" /p:Password="$(UserPWD)" /verbosity:detailed
+      env:
+        UserName: ${{ secrets.AZURE_WEBAPP_USER }}        # Secreto con nombre de usuario
+        UserPWD: ${{ secrets.AZURE_WEBAPP_PASSWORD }}     # Secreto con contraseña del App Service
 
+    # 6. Desplegar a Azure Web App usando publish-profile (opcional)
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}          # Nombre de la aplicación en Azure
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # Perfil de publicación en secreto de GitHub
+        package: ./repo/publish_output/**/*.zip
