@@ -26,13 +26,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install semgrep
 
+      - name: Backup .semgrepignore if it exists
+        run: |
+          if [ -f .semgrepignore ]; then
+            cp .semgrepignore .semgrepignore_backup
+          fi
+
       - name: Remove .semgrepignore temporarily
         run: rm -f .semgrepignore
 
-      - name: Run Semgrep analysis with exclusions
+      - name: Run Semgrep analysis
         env:
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_TOKEN }}
         run: semgrep --config=auto --max-target-bytes=5000000 --error --verbose --exclude '**/node_modules/**' || true
 
       - name: Restore .semgrepignore
-        run: git checkout .semgrepignore
+        run: |
+          if [ -f .semgrepignore_backup ]; then
+            mv .semgrepignore_backup .semgrepignore
+          fi
+
