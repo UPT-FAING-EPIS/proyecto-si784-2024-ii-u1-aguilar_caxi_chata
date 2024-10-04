@@ -21,11 +21,17 @@ jobs:
       with:
         path: './repo'
 
+    # **Agregar el paso de configuración de MSBuild**
+    # Este paso instala MSBuild y lo configura en el PATH para que esté disponible en las siguientes etapas
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
     # 3. Restaurar paquetes NuGet
     - name: Restore NuGet packages
       run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
     # 4. Compilar el proyecto con MSBuild
+    # Asegúrate de que MSBuild esté configurado y disponible en el PATH para este paso
     - name: Build with MSBuild
       run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
@@ -43,3 +49,4 @@ jobs:
         app-name: ${{ secrets.AZURE_WEBAPP_NAME }}          # Nombre de la aplicación en Azure
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # Perfil de publicación en secreto de GitHub
         package: ./repo/publish_output/**/*.zip
+
