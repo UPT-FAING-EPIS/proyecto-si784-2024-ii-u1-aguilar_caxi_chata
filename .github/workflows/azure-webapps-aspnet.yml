@@ -33,9 +33,9 @@ jobs:
     - name: Build with MSBuild
       run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
-    # 6. Publicar usando MSBuild con el perfil de publicación y secretos correctamente referenciados
+    # 6. Publicar usando MSBuild con el perfil de publicación y variables de entorno correctamente referenciadas
     - name: Publish using MSBuild
-      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml /p:WebPublishMethod=MSDeploy /p:UserName="${{ secrets.AZURE_WEBAPP_USER }}" /p:Password="${{ secrets.AZURE_WEBAPP_PASSWORD }}" /verbosity:detailed
+      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml /p:WebPublishMethod=MSDeploy /p:AllowUntrustedCertificate=true /p:UserName="${{ secrets.AZURE_WEBAPP_USER }}" /p:Password="${{ secrets.AZURE_WEBAPP_PASSWORD }}" /verbosity:detailed
       env:
         AZURE_WEBAPP_USER: ${{ secrets.AZURE_WEBAPP_USER }}
         AZURE_WEBAPP_PASSWORD: ${{ secrets.AZURE_WEBAPP_PASSWORD }}
