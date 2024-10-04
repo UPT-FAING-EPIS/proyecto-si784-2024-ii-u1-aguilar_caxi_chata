@@ -33,10 +33,10 @@ jobs:
     - name: Build with MSBuild
       run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
-    # 6. Publicar usando MSBuild con el perfil de publicación y variables de entorno correctamente referenciadas
-    - name: Publish using MSBuild
-      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile="${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}" /p:AllowUntrustedCertificate=true /verbosity:detailed
-      env:
-        AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-
+    # 6. Desplegar a Azure Web App usando el archivo PublishSettings
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: CalidadRumi               
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # Secreto con el archivo PublishSettings
 
