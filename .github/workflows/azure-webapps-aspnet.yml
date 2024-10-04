@@ -1,56 +1,64 @@
-# This workflow will build and push a .NET Core app to an Azure Web App when a commit is pushed to your default branch.
-#
-# This workflow assumes you have already created the target Azure App Service web app.
-# For instructions see https://docs.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore?tabs=net60&pivots=development-environment-vscode
-#
-# To configure this workflow:
-#
-# 1. Download the Publish Profile for your Azure Web App. You can download this file from the Overview page of your Web App in the Azure Portal.
-#    For more information: https://docs.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=applevel#generate-deployment-credentials
-#
-# 2. Create a secret in your repository named AZURE_WEBAPP_PUBLISH_PROFILE, paste the publish profile contents as the value of the secret.
-#    For instructions on obtaining the publish profile see: https://docs.microsoft.com/azure/app-service/deploy-github-actions#configure-the-github-secret
-#
-# 3. Change the value for the AZURE_WEBAPP_NAME. Optionally, change the AZURE_WEBAPP_PACKAGE_PATH and DOTNET_VERSION environment variables below.
-#
-# For more information on GitHub Actions for Azure: https://github.com/Azure/Actions
-# For more information on the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
 
-name: Deploy ASP.NET App to Azure Web App via FTP
+name: Deploy ASP.NET Project to Azure
 
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
 
+env:
+  AZURE_WEBAPP_PACKAGE_PATH: '$(System.DefaultWorkingDirectory)/publish_output' # Directorio temporal para el paquete de publicación
+
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+    # 1. Checkout del repositorio
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        path: './repo'
 
-      - name: Set up MSBuild
-        uses: microsoft/setup-msbuild@v1
+    # 2. Setup de .NET para usar MSBuild con .NET Framework
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
 
-      - name: Restore NuGet packages
-        run: nuget restore Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+    # 3. Restore de los paquetes NuGet necesarios
+    - name: Restore NuGet packages
+      run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-      - name: Build with MSBuild
-        run: msbuild Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
+    # 4. Compilación del proyecto con MSBuild
+    - name: Build the project with MSBuild
+      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
-      - name: Create Release folder if not exist
-        run: mkdir -p Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release
+    # 5. Publicación del proyecto usando MSBuild
+    - name: Publish using MSBuild
+      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml /p:WebPublishMethod=Package /p:PackageLocation="$(System.DefaultWorkingDirectory)/publish_output"
 
-      - name: List files in Release folder
-        run: dir Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release
+    # 6. Cargar el artefacto generado para el despliegue
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v3
+      with:
+        name: aspnet-app
+        path: $(System.DefaultWorkingDirectory)/publish_output/**/*.zip
 
-      - name: Deploy using FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: 'waws-prod-yt1-059.ftp.azurewebsites.windows.net'
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: './Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/bin/Release/'
-          server-dir: '/site/wwwroot/'
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    # 7. Descargar el artefacto generado en el paso anterior
+    - name: Download artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: aspnet-app
+
+    # 8. Desplegar a Azure Web App usando el perfil de publicación
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}              # Nombre de la aplicación en Azure
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # Perfil de publicación en secreto de GitHub
+        package: aspnet-app/*.zip                                # Paquete de publicación
+
