@@ -9,51 +9,33 @@ on:
 
 # Definición de trabajos (jobs) en el workflow
 jobs:
-  build-and-deploy:
+  build:
     runs-on: windows-latest
 
     steps:
-      # 1. Habilitar rutas largas en Git
-      - name: Enable long paths in Git
-        run: git config --system core.longpaths true
+    # 1. Habilitar rutas largas en Git
+    - name: Enable long paths in Git
+      run: git config --system core.longpaths true
 
-      # 2. Checkout del repositorio usando una ruta corta
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          path: './repo'  # Definir un nombre de ruta corto para minimizar longitud de archivos
+    # 2. Checkout del repositorio
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        path: './repo'
 
-      # 3. Listar archivos en el repositorio (para depuración)
-      - name: List files in the repository
-        run: ls -R ./repo
+    # 3. Verificar la estructura del repositorio y el perfil de publicación
+    - name: Verify Publish Profile Path
+      run: ls -R ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Properties/PublishProfiles
 
-      # 4. Setup MSBuild (necesario para .NET Framework en Windows)
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
+    # 4. Restaurar paquetes NuGet
+    - name: Restore NuGet packages
+      run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-      # 5. Restaurar paquetes NuGet
-      - name: Restore NuGet packages
-        run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+    # 5. Compilar con MSBuild
+    - name: Build with MSBuild
+      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
 
-      # 6. Compilar la solución usando MSBuild
-      - name: Build with MSBuild
-        run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
+    # 6. Publicar usando MSBuild y especificar el perfil de publicación
+    - name: Publish using MSBuild
+      run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml /p:WebPublishMethod=Package /p:PackageLocation="$(System.DefaultWorkingDirectory)/publish_output" /verbosity:detailed
 
-      # 7. Publicar usando MSBuild y crear paquete
-      - name: Publish using MSBuild
-        run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Properties/PublishProfiles/CalidadRumi-WebDeploy.pubxml /p:WebPublishMethod=Package /p:PackageLocation="$(System.DefaultWorkingDirectory)\publish_output"
-
-      # 8. Subir artefacto para despliegue
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
-        with:
-          name: aspnet-app
-          path: $(System.DefaultWorkingDirectory)\publish_output\**\*.zip
-
-      # 9. Descargar y desplegar en Azure Web App
-      - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}                 # Nombre de la aplicación en Azure
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # Perfil de publicación almacenado en los secretos de GitHub
-          package: $(System.DefaultWorkingDirectory)/publish_output/**/*.zip
