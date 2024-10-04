@@ -26,7 +26,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install semgrep
 
+      - name: Remove .semgrepignore # Eliminar .semgrepignore si es necesario
+        run: rm -f .semgrepignore
+
       - name: Run Semgrep analysis
         env:
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_TOKEN }}
-        run: semgrep --config=auto --max-target-bytes=5000000 --no-ignore --error --verbose
+        run: semgrep --config=auto --max-target-bytes=5000000 --error --verbose
+
+      - name: Restore .semgrepignore # Restaurar si se eliminó previamente
+        run: git checkout .semgrepignore
+
