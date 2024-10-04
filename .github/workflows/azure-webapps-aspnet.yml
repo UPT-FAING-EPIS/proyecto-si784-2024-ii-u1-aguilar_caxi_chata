@@ -6,27 +6,27 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-env:
-  AZURE_WEBAPP_PACKAGE_PATH: '$(System.DefaultWorkingDirectory)/publish_output' # Directorio temporal para el paquete de publicación
-
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-    # 1. Checkout del repositorio
+    # 1. Habilitar long paths en el registro de Windows
+    - name: Enable long paths in Windows registry
+      run: |
+        New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+        Write-Output "Long paths have been enabled."
+      shell: pwsh
+
+    # 2. Checkout del repositorio con una ruta más corta
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        path: './repo'
+        path: 'repo'
 
-    # 2. Setup de .NET para usar MSBuild con .NET Framework
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1
-
-    # 3. Restore de los paquetes NuGet necesarios
-    - name: Restore NuGet packages
-      run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+    # 3. Verificar la estructura del repositorio
+    - name: List files in the repository
+      run: ls -R ./repo
 
     # 4. Compilación del proyecto con MSBuild
     - name: Build the project with MSBuild
