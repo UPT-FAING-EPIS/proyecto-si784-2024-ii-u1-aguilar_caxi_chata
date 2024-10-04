@@ -26,8 +26,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install semgrep
 
-      # Configurar token de Semgrep como variable de entorno
       - name: Run Semgrep analysis
         env:
-          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_TOKEN }}  # Establece el token como variable de entorno
-        run: semgrep --config=auto --error
+          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_TOKEN }}
+        run: semgrep --config=auto --max-target-bytes=5000000 --no-ignore --error --verbose
