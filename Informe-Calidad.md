@@ -20,7 +20,7 @@ Integrantes:
 
 ***CAXI CALANI Luis Eduardo (2018062487)***
 ***AGUILAR PINTO Victor Eleazar (2018062487)***
-***CHATA CHOQUE Brant Antony (2018062487)***
+***CHATA CHOQUE Brant Antony (2020067577)***
 
 **Tacna – Perú**
 
