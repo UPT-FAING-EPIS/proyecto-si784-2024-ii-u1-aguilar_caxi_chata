@@ -16,11 +16,11 @@ Curso: *Calidad y Pruebas de Software*
 
 Docente: *Ing. Patrick Jose CUADROS QUIROGA*
 
-Integrantes:
+Integrantes:<br>
+<b>CAXI CALANI Luis Eduardo (2018062487)</b><br>
+<b>AGUILAR PINTO Victor Eleazar (2018062487)</b><br>
+<b>CHATA CHOQUE Brant Antony (2020067577)</b>
 
-***CAXI CALANI Luis Eduardo (2018062487)***
-***AGUILAR PINTO Victor Eleazar (2018062487)***
-***CHATA CHOQUE Brant Antony (2020067577)***
 
 **Tacna – Perú**
 
