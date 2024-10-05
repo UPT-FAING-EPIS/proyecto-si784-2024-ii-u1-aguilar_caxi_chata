@@ -1,4 +1,4 @@
-name: Security and Snyk Analysis
+name: Snyk Analysis
 
 on:
   push:
@@ -6,69 +6,43 @@ on:
   pull_request:
     branches: [ "main" ]
 
-permissions:
-  contents: write
-
 jobs:
-  security:
+  snyk:
     name: Snyk Vulnerability Analysis
-    runs-on: windows-latest  # Cambia a ubuntu-latest si prefieres usar un sistema Linux.
+    runs-on: windows-latest
 
     steps:
-      # Clonar el repositorio
+      # Paso para clonar el repositorio
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           path: './repo'
 
-      # (Opcional) Restaurar paquetes NuGet si el análisis requiere dependencias
+      # Restaurar paquetes NuGet para .NET Framework 4.8
       - name: Restore NuGet packages
         run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
-      # Instalar la CLI de Snyk
-      - name: Install Snyk CLI
-        run: npm install -g snyk
+      # Configurar .NET Framework 4.8
+      - name: Set up .NET version
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '4.8.x'
 
-      # Ejecutar el análisis de Snyk para buscar vulnerabilidades
+      # Instalar Snyk y snyk-to-html
+      - name: Install Snyk and snyk-to-html
+        run: |
+          npm install -g snyk snyk-to-html
+
+      # Ejecutar escaneo de Snyk para verificar vulnerabilidades en el código
       - name: Run Snyk to check for vulnerabilities
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk test --severity-threshold=high --sarif-file-output=snyk.sarif --file=./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
-
-      # Generar reporte HTML a partir del archivo SARIF
-      - name: Generate HTML report from SARIF
-        run: |
-          echo "<!DOCTYPE html>
-          <html lang='es'>
-          <head>
-              <meta charset='UTF-8'>
-              <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-              <title>Resultados de Vulnerabilidades</title>
-              <style>
-                  body { font-family: Arial, sans-serif; margin: 20px; }
-                  table { width: 100%; border-collapse: collapse; }
-                  th, td { border: 1px solid #ddd; padding: 8px; }
-                  th { background-color: #f2f2f2; }
-              </style>
-          </head>
-          <body>
-              <h1>Resultados de Vulnerabilidades</h1>
-              <table>
-                  <thead>
-                      <tr>
-                          <th>Regla ID</th>
-                          <th>Nivel</th>
-                          <th>Mensaje</th>
-                          <th>Ubicación</th>
-                      </tr>
-                  </thead>
-                  <tbody>" > snyk_report.html
-          cat snyk.sarif | jq -r '.runs[].results[] | "<tr><td>\(.ruleId)</td><td>\(.level)</td><td>\(.message.text)</td><td>\(.locations[0].physicalLocation.artifactLocation.uri) (Línea \(.locations[0].physicalLocation.region.startLine))</td></tr>"' >> snyk_report.html
-          echo "</tbody></table></body></html>" >> snyk_report.html
+        run: snyk code test --json | snyk-to-html -o snyk-report.html
 
       # Subir el reporte HTML como artefacto
       - name: Upload HTML report as artifact
         uses: actions/upload-artifact@v3
         with:
           name: snyk-report
-          path: snyk_report.html
+          path: snyk-report.html
+
