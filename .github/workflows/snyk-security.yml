@@ -1,5 +1,4 @@
-name: Snyk Analysis
-
+name: Security and Snyk Analysis
 
 on:
   push:
@@ -7,25 +6,22 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: write
+
 jobs:
-  snyk:
+  security:
     name: Snyk Vulnerability Analysis
-    runs-on: windows-latest
+    runs-on: windows-latest  # Cambia a ubuntu-latest si prefieres usar un sistema Linux.
 
     steps:
-      - name: Enable long paths in Git
-        run: git config --system core.longpaths true
-
+      # Clonar el repositorio
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           path: './repo'
-      - name: List files in the repository
-        run: ls -R ./repo
-      # Paso para instalar MSBuild
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
 
+      # (Opcional) Restaurar paquetes NuGet si el análisis requiere dependencias
       - name: Restore NuGet packages
         run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
@@ -33,7 +29,7 @@ jobs:
       - name: Install Snyk CLI
         run: npm install -g snyk
 
-      # Ejecutar escaneo de Snyk para verificar vulnerabilidades
+      # Ejecutar el análisis de Snyk para buscar vulnerabilidades
       - name: Run Snyk to check for vulnerabilities
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -67,9 +63,9 @@ jobs:
                       </tr>
                   </thead>
                   <tbody>" > snyk_report.html
-          # Procesa el archivo SARIF para extraer los resultados
           cat snyk.sarif | jq -r '.runs[].results[] | "<tr><td>\(.ruleId)</td><td>\(.level)</td><td>\(.message.text)</td><td>\(.locations[0].physicalLocation.artifactLocation.uri) (Línea \(.locations[0].physicalLocation.region.startLine))</td></tr>"' >> snyk_report.html
           echo "</tbody></table></body></html>" >> snyk_report.html
+
       # Subir el reporte HTML como artefacto
       - name: Upload HTML report as artifact
         uses: actions/upload-artifact@v3
