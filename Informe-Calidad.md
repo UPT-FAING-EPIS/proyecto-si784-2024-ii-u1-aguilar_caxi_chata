@@ -37,7 +37,7 @@ Integrantes:<br>
 |2\.0|AC VA LC|PCQ|PCQ|21/09/2024|Segunda Version|
 |3\.0|AC VA LC|PCQ|PCQ|03/10/2024|Versión Final|
 
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+<div style="page-break-after: always; visibility: hidden"></div>
 
 # **INDICE GENERAL**
 
@@ -76,7 +76,7 @@ Abstract
 [7. Cronograma](#_Toc52661356)
 
 
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+<div style="page-break-after: always; visibility: hidden"></div>
 
 **<u>Tema: Mejoramiento de la Aplicación RUMI</u>**
 
