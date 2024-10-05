@@ -131,25 +131,26 @@ Abstract
         <p><b>PASOS A SEGUIR</b></p>
             <li><b>Primer paso: Configuración del proyecto para SonarQube</b> En este paso, configuramos un nuevo proyecto en SonarQube. Asignamos un nombre para mostrar y una clave de proyecto que será utilizada para identificar de manera única este proyecto en SonarQube. También configuramos la rama principal del proyecto.</li>
             ![image](https://github.com/user-attachments/assets/7c99c00c-d051-471c-8c7b-16a3787d268c)
+            <img src="media/paso1.png" alt="Configuracion del proyecto para SonarQube" style="width:600px;">
             <li><b>Segundo paso</b> Este paso permite definir cómo SonarQube tratará el código nuevo dentro del proyecto. Esto es esencial para seguir la metodología de "Clean as You Code", donde el código nuevo se considera de manera especial para que mantenga altos estándares de calidad.</li>
-            ![image](https://github.com/user-attachments/assets/428d3c89-d5a1-49c6-a31b-563479067508)
+            <img src="media/pasodos.png" alt="" style="width:600px;">
             <li><b>Tercer paso:</b>En este paso, seleccionamos el método de análisis que será utilizado para escanear el código de tu proyecto. SonarQube ofrece diversas opciones para integrarse con plataformas de CI/CD, pero en este caso se ha seleccionado la opción Locally para hacer pruebas locales del análisis.</li>
-            ![image](https://github.com/user-attachments/assets/a1c8a5d3-0156-4c79-8f22-fd9ee65d5cac)
+            <img src="media/pasotres.png" alt="" style="width:600px;">
             <li><b>Cuarto paso:</b>Generamos un Token de Proyecto para autenticar las ejecuciones de SonarScanner en este proyecto. Este token será utilizado para identificar el proyecto al hacer los análisis.</li>
-            ![image](https://github.com/user-attachments/assets/bc469a98-09fb-4158-bfe4-26aa0574eb3e)
+            <img src="media/pasocuatro.png" alt="" style="width:600px;">
             <li><b>Quinto paso:</b>Una vez generado, SonarQube mostrará el token que deberá ser utilizado en los análisis del proyecto. Este token es sensible y debe mantenerse privado.
             -CalidadRumi: sqp_71f05de7adf9a946a7f69dd14e457182da8b4568</li>
-            ![image](https://github.com/user-attachments/assets/b9e145c8-55ea-4e3c-b9c9-59663492da3a)
+            <img src="media/pasocinco.png" alt="" style="width:600px;">
             <li><b>Sexto paso:</b>Se configura la variable de entorno que apunta a la ruta donde está instalado SonarScanner en el sistema. Esto es necesario para que los comandos de SonarScanner se puedan ejecutar desde cualquier parte del sistema.</li>
-            ![image](https://github.com/user-attachments/assets/41eecc05-cfcb-426f-8eea-5e2b483d6ede)
+            <img src="media/pasoseis.png" alt="" style="width:600px;">
             <li><b>Septimo paso:</b>En este paso, ejecutamos el análisis del proyecto utilizando SonarScanner for .NET Framework. El análisis local revisa el código y lo sube a SonarQube para generar los reportes de calidad y seguridad.</li>
-            ![image](https://github.com/user-attachments/assets/4ecc7a9e-be3c-4d6e-8c3a-54a15028c472)
+            <img src="media/pasosiete.png" alt="" style="width:600px;">
             <li><b>Octavo paso:</b>El resultado de la compilación y el análisis final es procesado por SonarScanner, el cual sube los resultados a SonarQube para su revisión.</li>
-            ![image](https://github.com/user-attachments/assets/b82fa3a4-2855-4c0f-bb3f-b5b4410ef76f)
+            <img src="media/pasoocho.png" alt="" style="width:600px;">
             <li><b>Noveno paso:</b>Si existen advertencias relacionadas con la configuración o análisis, SonarScanner las mostrará en la terminal.</li>
-            ![image](https://github.com/user-attachments/assets/d393b768-8e18-41f4-b3cc-fd16700347bb)
+            <img src="media/pasonueve.png" alt="" style="width:600px;">
             <li><b>Decimo paso:</b>El análisis de SonarScanner se completa y los resultados son enviados a SonarQube. A partir de aquí, puedes revisar los resultados en la interfaz web de SonarQube.</li>
-            ![image](https://github.com/user-attachments/assets/7a29a145-9f41-4033-8c10-32d21dfc8d49)
+            <img src="media/pasodiez.png" alt="" style="width:600px;">
 
     7.2.   Metodología, técnicas usadas
     <p>El análisis se realizó en varias fases:</p>
