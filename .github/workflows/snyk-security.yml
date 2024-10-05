@@ -9,10 +9,9 @@ on:
 jobs:
   snyk:
     name: Snyk Vulnerability Analysis
-    runs-on: windows-latest
+    runs-on: ubuntu-latest  # Cambiado a Ubuntu para evitar limitaciones de Windows
 
     steps:
-      # Paso para clonar el repositorio
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
