@@ -40,7 +40,9 @@ Versión *1.0*
 |CONTROL DE VERSIONES||||||
 | :-: | :- | :- | :- | :- | :- |
 |Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-|1\.0|MPV|ELV|ARV|21/09/2024|Versión Inicial|
+|1\.0|AC VA LC|PCQ|PCQ|17/09/2024|Versión Inicial|
+|2\.0|AC VA LC|PCQ|PCQ|21/09/2024|Segunda Version|
+|3\.0|AC VA LC|PCQ|PCQ|03/10/2024|Versión Final|
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -126,13 +128,42 @@ Abstract
     <img src="media/Snyk.png" alt="Resultados del análisis de SonarQube" style="width:600px;">
 
     <p><b>SonarQube:</b> Herramienta de análisis estático utilizada para evaluar la calidad del código. Detectó problemas de duplicación de código y alta complejidad ciclomática en algunos módulos clave.</p>
-    <img src="media/Sonar.png" alt="Resultados del análisis de SonarQube" style="width:600px;">
+        <p><b>PASOS A SEGUIR</b></p>
+            <li><b>Primer paso: Configuración del proyecto para SonarQube</b> En este paso, configuramos un nuevo proyecto en SonarQube. Asignamos un nombre para mostrar y una clave de proyecto que será utilizada para identificar de manera única este proyecto en SonarQube. También configuramos la rama principal del proyecto.</li>
+            ![image](https://github.com/user-attachments/assets/7c99c00c-d051-471c-8c7b-16a3787d268c)
+            <li><b>Segundo paso</b> Este paso permite definir cómo SonarQube tratará el código nuevo dentro del proyecto. Esto es esencial para seguir la metodología de "Clean as You Code", donde el código nuevo se considera de manera especial para que mantenga altos estándares de calidad.</li>
+            ![image](https://github.com/user-attachments/assets/428d3c89-d5a1-49c6-a31b-563479067508)
+            <li><b>Tercer paso:</b>En este paso, seleccionamos el método de análisis que será utilizado para escanear el código de tu proyecto. SonarQube ofrece diversas opciones para integrarse con plataformas de CI/CD, pero en este caso se ha seleccionado la opción Locally para hacer pruebas locales del análisis.</li>
+            ![image](https://github.com/user-attachments/assets/a1c8a5d3-0156-4c79-8f22-fd9ee65d5cac)
+            <li><b>Cuarto paso:</b>Generamos un Token de Proyecto para autenticar las ejecuciones de SonarScanner en este proyecto. Este token será utilizado para identificar el proyecto al hacer los análisis.</li>
+            ![image](https://github.com/user-attachments/assets/bc469a98-09fb-4158-bfe4-26aa0574eb3e)
+            <li><b>Quinto paso:</b>Una vez generado, SonarQube mostrará el token que deberá ser utilizado en los análisis del proyecto. Este token es sensible y debe mantenerse privado.
+            -CalidadRumi: sqp_71f05de7adf9a946a7f69dd14e457182da8b4568</li>
+            ![image](https://github.com/user-attachments/assets/b9e145c8-55ea-4e3c-b9c9-59663492da3a)
+            <li><b>Sexto paso:</b>Se configura la variable de entorno que apunta a la ruta donde está instalado SonarScanner en el sistema. Esto es necesario para que los comandos de SonarScanner se puedan ejecutar desde cualquier parte del sistema.</li>
+            ![image](https://github.com/user-attachments/assets/41eecc05-cfcb-426f-8eea-5e2b483d6ede)
+            <li><b>Septimo paso:</b>En este paso, ejecutamos el análisis del proyecto utilizando SonarScanner for .NET Framework. El análisis local revisa el código y lo sube a SonarQube para generar los reportes de calidad y seguridad.</li>
+            ![image](https://github.com/user-attachments/assets/4ecc7a9e-be3c-4d6e-8c3a-54a15028c472)
+            <li><b>Octavo paso:</b>El resultado de la compilación y el análisis final es procesado por SonarScanner, el cual sube los resultados a SonarQube para su revisión.</li>
+            ![image](https://github.com/user-attachments/assets/b82fa3a4-2855-4c0f-bb3f-b5b4410ef76f)
+            <li><b>Noveno paso:</b>Si existen advertencias relacionadas con la configuración o análisis, SonarScanner las mostrará en la terminal.</li>
+            ![image](https://github.com/user-attachments/assets/d393b768-8e18-41f4-b3cc-fd16700347bb)
+            <li><b>Decimo paso:</b>El análisis de SonarScanner se completa y los resultados son enviados a SonarQube. A partir de aquí, puedes revisar los resultados en la interfaz web de SonarQube.</li>
+            ![image](https://github.com/user-attachments/assets/7a29a145-9f41-4033-8c10-32d21dfc8d49)
 
     7.2.   Metodología, técnicas usadas
     <p>El análisis se realizó en varias fases:</p>
     <ul>
         <li><b>Fase 1:</b> Análisis inicial con Snyk para identificar vulnerabilidades de seguridad en las dependencias y el código.</li>
+        ![image](https://github.com/user-attachments/assets/0a19d608-8a31-4614-8292-51b395297e46)
+        <li><b>Vulnerabilidad Detectada: Validación de Tokens Anti-Forgery Deshabilitada en Acción MVC</b></li>
+        ![image](https://github.com/user-attachments/assets/30d04da5-be93-49fc-a89a-d962e79e64b5)
+        <li><b>Vulnerabilidad Detectada: Uso de Algoritmo de Hash MD5 Inseguro para Contraseñas</b></li>
+        ![image](https://github.com/user-attachments/assets/8879006e-9b9b-401a-8b9e-d99f984b3de2)
+        <li><b>Vulnerabilidad Detectada: Uso Inseguro de Plugin de jQuery por Entrada No Saneada</b></li>
+        ![image](https://github.com/user-attachments/assets/b2a63964-b580-4835-83de-093f069a0370)
         <li><b>Fase 2:</b> Análisis estático con SonarQube para detectar problemas de calidad, como código duplicado y alta complejidad.</li>
+        <img src="media/Sonar.png" alt="Resultados del análisis de SonarQube" style="width:600px;">
         <li><b>Fase 3:</b> Implementación de mejoras y reanálisis de la aplicación para verificar que los problemas se resolvieran.</li>
     </ul>
 
