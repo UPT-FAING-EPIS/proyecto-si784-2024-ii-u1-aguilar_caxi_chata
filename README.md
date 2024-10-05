@@ -147,17 +147,17 @@
             </tr>
          <tr>
                 <td>2.0</td>
-                <td>MPV</td>
-                <td>ELV</td>
-                <td>ARV</td>
+                <td>AC VA LC</td>
+                <td>PCQ</td>
+                <td>PCQ</td>
                 <td>21/09/2024</td>
                 <td>Segunda Revision</td>
             </tr>
          <tr>
                 <td>3.0</td>
-                <td>MPV</td>
-                <td>ELV</td>
-                <td>ARV</td>
+                <td>AC VA LC</td>
+                <td>PCQ</td>
+                <td>PCQ</td>
                 <td>03/10/2024</td>
                 <td>Versión Final</td>
             </tr>
