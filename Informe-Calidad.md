@@ -156,13 +156,13 @@ Abstract
     <p>El análisis se realizó en varias fases:</p>
     <ul>
         <li><b>Fase 1:</b> Análisis inicial con Snyk para identificar vulnerabilidades de seguridad en las dependencias y el código.</li>
-        ![image](https://github.com/user-attachments/assets/0a19d608-8a31-4614-8292-51b395297e46)
+        <img src="media/fase1.png" alt="" style="width:600px;">
         <li><b>Vulnerabilidad Detectada: Validación de Tokens Anti-Forgery Deshabilitada en Acción MVC</b></li>
-        ![image](https://github.com/user-attachments/assets/30d04da5-be93-49fc-a89a-d962e79e64b5)
+        <img src="media/fase1.1.png" alt="" style="width:600px;">
         <li><b>Vulnerabilidad Detectada: Uso de Algoritmo de Hash MD5 Inseguro para Contraseñas</b></li>
-        ![image](https://github.com/user-attachments/assets/8879006e-9b9b-401a-8b9e-d99f984b3de2)
+        <img src="media/fase1.2.png" alt="" style="width:600px;">
         <li><b>Vulnerabilidad Detectada: Uso Inseguro de Plugin de jQuery por Entrada No Saneada</b></li>
-        ![image](https://github.com/user-attachments/assets/b2a63964-b580-4835-83de-093f069a0370)
+        <img src="media/fase1.3.png" alt="" style="width:600px;">
         <li><b>Fase 2:</b> Análisis estático con SonarQube para detectar problemas de calidad, como código duplicado y alta complejidad.</li>
         <img src="media/Sonar.png" alt="Resultados del análisis de SonarQube" style="width:600px;">
         <li><b>Fase 3:</b> Implementación de mejoras y reanálisis de la aplicación para verificar que los problemas se resolvieran.</li>
