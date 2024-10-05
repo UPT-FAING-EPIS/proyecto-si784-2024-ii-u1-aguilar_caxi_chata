@@ -26,16 +26,9 @@ Integrantes:<br>
 
 ***2024***
 
-**  
-**
 </center>
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-Sistema Web de Recompensas por Participaciones para Jovenes
-
-Informe de Factibilidad
-
-Versión *1.0*
 
 |CONTROL DE VERSIONES||||||
 | :-: | :- | :- | :- | :- | :- |
