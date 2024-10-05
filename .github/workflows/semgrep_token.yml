@@ -1,48 +1,49 @@
-name: Semgrep Analysis
+name: Semgrep Security Analysis
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch:
 
 jobs:
-  semgrep:
-    name: Semgrep Analysis
+  semgrep_analysis:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          path: './repo'
 
+      # Restaurar paquetes NuGet
+      - name: Restore NuGet packages
+        run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
+
+      # Semgrep Analysis usando Docker
+      - name: Set up Semgrep using Docker
+        run: docker pull semgrep/semgrep
+
+      - name: Run Semgrep scan
+        run: docker run --rm -v $(pwd):/src semgrep/semgrep semgrep scan --config="p/default" --json --output semgrep.json --metrics=off
+
+      # Instalar prospector-html para generar reporte HTML de Semgrep
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install Semgrep
-        run: |
-          python -m pip install --upgrade pip
-          pip install semgrep
+      - name: Install prospector-html
+        run: python -m pip install prospector2html
 
-      - name: Backup .semgrepignore if it exists
-        run: |
-          if [ -f .semgrepignore ]; then
-            cp .semgrepignore .semgrepignore_backup
-          fi
+      # Convertir los resultados de Semgrep a HTML
+      - name: Convert Semgrep results to HTML
+        run: prospector-html --input semgrep.json --output semgrep-report.html --filter semgrep || true
 
-      - name: Remove .semgrepignore temporarily
-        run: rm -f .semgrepignore
-
-      - name: Run Semgrep analysis
-        env:
-          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_TOKEN }}
-        run: semgrep --config=auto --max-target-bytes=5000000 --error --verbose --exclude '**/node_modules/**' || true
-
-      - name: Restore .semgrepignore
-        run: |
-          if [ -f .semgrepignore_backup ]; then
-            mv .semgrepignore_backup .semgrepignore
-          fi
+      # Subir el reporte de Semgrep como artefacto
+      - name: Upload Semgrep report as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: semgrep-report
+          path: semgrep-report.html
 
