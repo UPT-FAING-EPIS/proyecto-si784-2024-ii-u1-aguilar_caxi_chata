@@ -9,7 +9,7 @@ on:
 jobs:
   snyk:
     name: Snyk Vulnerability Analysis
-    runs-on: windows-latest  # Utiliza un entorno de Windows, que ya tiene .NET Framework 4.8
+    runs-on: ubuntu-latest  # Cambiar a Ubuntu para evitar limitaciones de Windows
 
     steps:
       - name: Checkout repository
@@ -17,7 +17,7 @@ jobs:
         with:
           path: './repo'
 
-      # Restaurar paquetes NuGet para .NET Framework 4.8
+      # Restaurar paquetes NuGet
       - name: Restore NuGet packages
         run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
 
@@ -26,7 +26,7 @@ jobs:
         run: |
           npm install -g snyk snyk-to-html
 
-      # Ejecutar escaneo de Snyk para verificar vulnerabilidades en el código
+      # Ejecutar escaneo de Snyk
       - name: Run Snyk to check for vulnerabilities
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
