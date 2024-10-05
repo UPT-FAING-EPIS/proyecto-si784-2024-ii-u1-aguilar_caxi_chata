@@ -122,7 +122,7 @@
         </table>
    </div>
 
-   <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+   <div style="page-break-after: always; visibility: hidden"></div>
 
    <h3>CONTROL DE VERSIONES</h3>
     <table>
@@ -148,7 +148,7 @@
         </tbody>
     </table>
 
-   <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+   <div style="page-break-after: always; visibility: hidden"></div>
 
    <h3 id="indice-general">INDICE GENERAL</h3>
     <ul>
