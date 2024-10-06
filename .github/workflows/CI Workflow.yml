@@ -105,10 +105,10 @@ jobs:
   # Job 4: Build & Publish (dependiente de los análisis anteriores)
   build_and_publish:
     name: Build & Publish
-    runs-on: windows-latest  # Asegúrate de que se ejecute en Windows
+    runs-on: windows-latest  
     needs: [sonarcloud, semgrep, snyk]  # Este job solo se ejecuta si los tres análisis anteriores fueron exitosos
     steps:
-      # 1. Habilitar rutas largas en Git ANTES del Checkout
+      # 1. Habilitar rutas largas en Git antes del Checkout
       - name: Enable long paths in Git
         run: git config --system core.longpaths true
   
@@ -118,21 +118,25 @@ jobs:
         with:
           path: './repo'
   
-      # 3. Restaurar paquetes NuGet
+      # 3. Instalar MSBuild
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+  
+      # 4. Restaurar paquetes NuGet
       - name: Restore NuGet packages
         run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
   
-      # 4. Compilar el proyecto con MSBuild
+      # 5. Compilar el proyecto con MSBuild
       - name: Build project with MSBuild
         run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
   
-      # 5. Publicar el paquete en NuGet
+      # 6. Publicar el paquete en NuGet
       - name: Publish NuGet Package
         run: |
           dotnet pack ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln --configuration Release
           dotnet nuget push ./repo/**/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
   
-      # 6. Crear un Release en GitHub
+      # 7. Crear un Release en GitHub
       - name: Create a Release
         uses: actions/create-release@v1
         with:
@@ -142,3 +146,5 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
