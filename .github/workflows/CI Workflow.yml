@@ -128,7 +128,7 @@ jobs:
   
       # 5. Compilar el proyecto con MSBuild (no usar dotnet)
       - name: Build project with MSBuild
-        run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
+        run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.csproj /t:Pack /p:Configuration=Release
   
       # 6. Empaquetar el proyecto para NuGet (con MSBuild, no dotnet pack)
       - name: Pack NuGet Package
