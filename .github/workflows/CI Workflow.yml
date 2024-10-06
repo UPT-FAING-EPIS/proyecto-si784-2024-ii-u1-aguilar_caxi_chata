@@ -105,8 +105,8 @@ jobs:
   # Job 4: Build & Publish (dependiente de los análisis anteriores)
   build_and_publish:
     name: Build & Publish
-    runs-on: windows-latest  
-    needs: [sonarcloud, semgrep, snyk]  # Este job solo se ejecuta si los tres análisis anteriores fueron exitosos
+    runs-on: windows-latest
+    needs: [sonarcloud, semgrep, snyk]
     steps:
       # 1. Habilitar rutas largas en Git antes del Checkout
       - name: Enable long paths in Git
@@ -118,7 +118,7 @@ jobs:
         with:
           path: './repo'
   
-      # 3. Instalar MSBuild
+      # 3. Instalar MSBuild (para usar Visual Studio)
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
   
@@ -126,17 +126,20 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln
   
-      # 5. Compilar el proyecto con MSBuild
+      # 5. Compilar el proyecto con MSBuild (no usar dotnet)
       - name: Build project with MSBuild
         run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln /p:Configuration=Release
   
-      # 6. Publicar el paquete en NuGet
+      # 6. Empaquetar el proyecto para NuGet (con MSBuild, no dotnet pack)
+      - name: Pack NuGet Package
+        run: msbuild ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.csproj /t:Pack /p:Configuration=Release
+  
+      # 7. Publicar el paquete en NuGet (asegúrate de tener un API key válido)
       - name: Publish NuGet Package
         run: |
-          dotnet pack ./repo/Proyecto_RUMI/Proyecto_Web2_Aguilar_Chino_Gonzales_Perez.sln --configuration Release
           dotnet nuget push ./repo/**/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
   
-      # 7. Crear un Release en GitHub
+      # 8. Crear un Release en GitHub
       - name: Create a Release
         uses: actions/create-release@v1
         with:
@@ -146,5 +149,4 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
