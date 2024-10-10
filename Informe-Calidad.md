@@ -125,7 +125,13 @@ Abstract
    <div style="text-align: center;">Figura 6.2: Diagrama de Clases</div>
 
 
-   , Diagrama de Componentes y Arquitectura.
+   ## 6.3. Diagrama de Componentes.
+
+   ![Componentes](https://github.com/user-attachments/assets/f46b0faa-9311-4e62-9706-a9a22f2f3fde)
+
+   <div style="text-align: center;">Figura 6.2: Diagrama de Componentes</div>
+   
+   ## 6.4. Diagrama de Arquitectura.
 
 8. Desarrollo de la propuesta
     <p>El análisis de la aplicación RUMI fue llevado a cabo utilizando las herramientas Snyk y SonarQube, las cuales detectaron varias áreas de mejora, tanto en la seguridad como en la calidad del código.</p>
