@@ -117,11 +117,16 @@ Abstract
     ![casosUso](https://github.com/user-attachments/assets/c644460c-eb70-4d88-aa5a-776af2cada2f)
     <div style="text-align: center;">Figura 6.1: Diagrama de Casos de Uso</div>
 
-   ## 6.2. Diagrama de Clases
+
+   ## 6.2. Diagrama de Clases BD
 
    ![DiagramaClases](https://github.com/user-attachments/assets/b85268b1-edd6-4e26-a67a-ee0935095a0f)
-   <div style="text-align: center;">Figura 6.2: Diagrama de Clases</div>
+   <div style="text-align: center;">Figura 6.2: Diagrama de Clases BD</div>
 
+   ## 6.2. Diagrama de Clases
+
+   ![ClasesMetodos drawio](https://github.com/user-attachments/assets/52b93c56-813a-4042-9989-ec5de4349bed)
+   <div style="text-align: center;">Figura 6.2: Diagrama de Clases BD</div>
 
    ## 6.3. Diagrama de Componentes.
 
