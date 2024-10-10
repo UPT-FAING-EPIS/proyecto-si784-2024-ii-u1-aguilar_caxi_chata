@@ -139,14 +139,4 @@ jobs:
         run: |
           dotnet nuget push ./repo/**/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
   
-      # 8. Crear un Release en GitHub
-      - name: Create a Release
-        uses: actions/create-release@v1
-        with:
-          tag_name: v1.0.0
-          release_name: "v1.0.0 inicial"
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
