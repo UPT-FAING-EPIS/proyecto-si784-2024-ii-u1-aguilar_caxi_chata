@@ -111,10 +111,15 @@ Abstract
     </ul>
 
 6. <span id="_Toc52661357" class="anchor"></span>**Referentes teóricos**
-    6.1. Diagramas de Casos de Uso
+
+   6.1. Diagramas de Casos de Uso
     ![casosUso](https://github.com/user-attachments/assets/c644460c-eb70-4d88-aa5a-776af2cada2f)
 
-   Diagrama de Clases, Diagrama de Componentes y Arquitectura.
+
+   6.2. Diagrama de Clases
+    ![DiagramaClases](https://github.com/user-attachments/assets/b85268b1-edd6-4e26-a67a-ee0935095a0f)
+
+   , Diagrama de Componentes y Arquitectura.
 
 8. Desarrollo de la propuesta
     <p>El análisis de la aplicación RUMI fue llevado a cabo utilizando las herramientas Snyk y SonarQube, las cuales detectaron varias áreas de mejora, tanto en la seguridad como en la calidad del código.</p>
