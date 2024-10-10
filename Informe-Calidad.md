@@ -111,9 +111,12 @@ Abstract
     </ul>
 
 6. <span id="_Toc52661357" class="anchor"></span>**Referentes teóricos**
-    Diagramas de Casos de Uso, Diagrama de Clases, Diagrama de Componentes y Arquitectura.
+    6.1. Diagramas de Casos de Uso
+    ![casosUso](https://github.com/user-attachments/assets/c644460c-eb70-4d88-aa5a-776af2cada2f)
 
-7. Desarrollo de la propuesta
+   Diagrama de Clases, Diagrama de Componentes y Arquitectura.
+
+8. Desarrollo de la propuesta
     <p>El análisis de la aplicación RUMI fue llevado a cabo utilizando las herramientas Snyk y SonarQube, las cuales detectaron varias áreas de mejora, tanto en la seguridad como en la calidad del código.</p>
 
     7.1.   Tecnología de información 
@@ -161,7 +164,7 @@ Abstract
         <li><b>Fase 3:</b> Implementación de mejoras y reanálisis de la aplicación para verificar que los problemas se resolvieran.</li>
     </ul>
 
-8. Cronograma
+9. Cronograma
     <p><b>Personas involucradas:</b> Equipo de desarrollo, equipo de seguridad.</p>
     <p><b>Tiempo:</b> Se estima que la corrección de todas las vulnerabilidades identificadas, así como la implementación de mejoras en la calidad del código, se completará en un periodo de 4 semanas.</p>
     <p><b>Recursos:</b> Las herramientas utilizadas incluyen Snyk, SonarQube y Visual Studio. Los desarrolladores deberán seguir las recomendaciones del análisis para realizar los cambios pertinentes.</p>
